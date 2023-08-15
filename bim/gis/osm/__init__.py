@@ -1,4 +1,10 @@
+import os.path
 import re
+
+from ..traffic.od_matrix import AreaOriginDestinationMatrix
+from ...gis import utils as gis_utils
+import geopandas as gpd
+from shapely.geometry import LineString
 
 
 class Nominatim(object):
@@ -26,6 +32,40 @@ class Nominatim(object):
             return osm_id, name, linestring_wkt
         return None
 
+    def load_streets(self, path='gmdata.nosync/greater_manchester_streets.txt'):
+        # TODO: wrap streets to List of objects
+        # also 'manchester_m60.txt' and 'manchester_streets_north_west.txt' dumps exist
+        with open(path, 'r') as f:
+            streets = list(filter(None, map(self.parse_street, f.readlines())))
+            return streets
+
+    def load_streets_gdf(self, gdf_path='gmdata.nosync/greater_manchester_streets_with_lsoa.csv',
+                         original_path='gmdata.nosync/greater_manchester_streets.txt',
+                         crs: int = gis_utils.EPSG_WSG84) -> gpd.GeoDataFrame:
+        if not os.path.exists(gdf_path):
+            gdf = self.make_streets_with_lsoa_gdf(original_path, crs)
+            gdf.to_csv(gdf_path, index=False)
+            gis_utils.save_geodf_to_csv(gdf, gdf_path)
+
+        gdf = gis_utils.read_csv_to_geodf(gdf_path)
+        gdf.set_crs(crs, inplace=True)
+        return gdf
+
+    def make_streets_with_lsoa_gdf(self,
+                                   original_path='gmdata.nosync/greater_manchester_streets.txt',
+                                   crs: int = gis_utils.EPSG_WSG84):
+        streets = self.load_streets(original_path)
+        streets_gdf = gpd.GeoDataFrame(
+            streets,
+            columns=['id', 'name', 'coords'],
+            geometry=[LineString(street[2]) for street in streets]
+        )
+        streets_gdf.crs = crs
+
+        area_od_matrix = AreaOriginDestinationMatrix()
+        streets_gdf[gis_utils.LSOA_CODE_COLUMN] = area_od_matrix.streets_geometry_to_lsoa(streets_gdf)
+        return streets_gdf
+
 
 def test_parse_street():
     res = Nominatim().parse_street(
@@ -43,4 +83,3 @@ def test_parse_street():
                  ['-2.3849496', '53.5429316'],
                  ['-2.3850697', '53.5429756']])
     assert res == true_res
-
