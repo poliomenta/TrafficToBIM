@@ -13,6 +13,11 @@ start_longitude = -2.244644
 start_latitude = 53.474641
 
 # Ending Longitude (X) and Latitude (Y) coordinates for Greater Manchester
+# end_longitude = -2.244748
+# end_latitude = 53.492618
+
+# now try more curved by Y axis
+# Ending Longitude (X) and Latitude (Y) coordinates for Greater Manchester
 end_longitude = -2.244748
 end_latitude = 53.492618
 
@@ -22,7 +27,7 @@ end_latitude = 53.492618
 steps = 100
 step_size_x = (start_longitude - end_longitude) / steps
 step_size_y = (start_latitude - end_latitude) / steps
-X = np.arange(end_longitude, start_longitude+1e-10, step_size_x)
+X = np.arange(end_longitude, start_longitude+1e-10, step_size_x)[:steps]
 
 def between(start, end):
     return (end + start) / 2
@@ -30,16 +35,22 @@ def between(start, end):
 middle_longitude = between(end_longitude, start_longitude)
 print([end_longitude, end_longitude + 0.00001, middle_longitude, start_longitude - 0.00001, start_longitude])
 
-target_z_cs = [0., -2.0, -20, -2.0, 0.]
+# target_z_cs = [0., -2.0, -20, -2.0, 0.]
+target_z_cs = [0., -4.0, -40, -4.0, 0.]
 # target_z_cs = [0., -0.5, -1, -0.5, 0.]
 csZ = CubicSpline([end_longitude, end_longitude + 0.00001, middle_longitude, start_longitude - 0.00001, start_longitude],
                   target_z_cs)
+# csY_middle_point_shift = 0.001
+csY_middle_point_shift = 0.01
 csY = CubicSpline([end_longitude, middle_longitude, start_longitude],
-                  [end_latitude, between(end_latitude, start_latitude)+0.001, start_latitude])
+                  [end_latitude, between(end_latitude, start_latitude)+csY_middle_point_shift, start_latitude])
 
 # Y = np.arange(end_latitude, start_latitude+1e-10, step_size_y)
 Y = csY(X)
 Z = csZ(X)
+# Y = np.arange(end_latitude, start_latitude+1e-10, step_size_y)
+# X[:] = 0
+# Z[:] = 0
 Z[-1] = 0.
 
 y_northings_1st, x_eastings_1st = WGS84toOSGB36(Y[0], X[0])
@@ -54,7 +65,7 @@ with open('D:\\UNIVERSITY OF PORTSMOUTH\\Dissertation Research\\DYNAMO\\Tunnel\\
 
         scale_factor = 1000
         x_eastings  *= scale_factor
-        y_northings *= scale_factor
+        y_northings *= scale_factor * 100
         z           *= scale_factor
         if i % 10 == 0:
             file.write(f"{x_eastings},{y_northings},{z},My_Solid,Void\n")
