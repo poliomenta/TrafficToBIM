@@ -1,34 +1,40 @@
-"""
-1) read *aggregated_info.xml to get edge table data
-2) add coordinates from *edge.edg.xml to be able plot these edges
-3) select adjacent edges with high timeLoss value and make a graph from them
-4) generate potential tunnel routes for the graph
-
-"""
 from .optimiser import RegionExperiment
 import numpy as np
 
+import tqdm
 from collections import defaultdict
 from heapq import heappush, heappop
 import pandas as pd
 import networkx as nx
 import matplotlib.pyplot as plt
 from shapely.ops import substring
-from shapely import affinity
-from shapely.geometry import Point, LineString
+from shapely import affinity, ops
+from shapely.geometry import Point, LineString, MultiLineString
 import warnings
-
+from typing import List
+import matplotlib
+from matplotlib.colors import ListedColormap
 
 CONGESTED_STREET = 1
 CONGESTED_NEIGHBOUR_STREET = 2
 
 DEFAULT_FIGURE_SIZE = (15, 10)
+AXIS_LIMITS_CITY_OF_MANCHESTER = ((380000, 390000), (390000, 400000))
+AXIS_LIMITS_STOCKPORT = ((388000, 391000), (389750, 391100))
+AXIS_LIMITS_MANCHESTER_SOUTH = ((381400, 387800), (391000, 396500))
+DEFAULT_TUNNEL_NUM_LANES = 2
+DEFAULT_TUNNEL_PRIORITY = 5
+DEFAULT_TUNNEL_MAX_SPEED = 60
 
 
 def plot_path(gdf):
     def f(ax):
         gdf['shape'].plot(ax=ax)
     return f
+
+
+def interpolate_linestring_point(linestring, distance_from_start):
+    return linestring.interpolate(distance_from_start)
 
 
 class GraphUtils:
@@ -205,13 +211,21 @@ class VectorUtils:
 
 
 class TunnelGenerator:
-    def __init__(self, exp: RegionExperiment):
+    def __init__(self, exp: RegionExperiment, axis_limits=AXIS_LIMITS_CITY_OF_MANCHESTER, percent_timeloss=0.98,
+                 min_tunnel_len=2000, skip_marking_congested_neighbours=False, skip_tunnels_generation=False,
+                 path_edge_count: int = 20, disable_tqdm: bool = False):
         sumo_network = exp.load_modified_network()
         self.sumo_network = sumo_network
         self.nodes_df = sumo_network.make_nodes_df()
         self.edges_df = sumo_network.make_edges_df()
-        self.raw_metrics = exp.load_raw_metrics()
+        raw_metrics_df, raw_bus_metrics_df = exp.load_raw_metrics()
+        self.raw_metrics = raw_metrics_df
         self.raw_metrics['edge_id'] = self.raw_metrics.index
+        self.axis_limits = axis_limits
+        self.min_tunnel_len = min_tunnel_len
+        self.path_edge_count = path_edge_count
+        self.disable_tqdm = disable_tqdm
+
         self.joined_metrics = None
         self.edges_from_to_pairs = None
         self.congested_edge_pairs = None
@@ -220,13 +234,21 @@ class TunnelGenerator:
         self.graph_components_df = None
         self.edge_to_graph_id = None
         self.graph_ids = None
+        self.percent_timeloss = percent_timeloss
+        self.last_generated_random_paths = None
+
+        self.skip_marking_congested_neighbours = skip_marking_congested_neighbours
 
         self.make_joined_metrics_and_edge_pairs()
 
-        self.make_congested_street_graphs()
+        if not skip_tunnels_generation:
+            self.make_congested_street_graphs()
 
     def make_joined_metrics_and_edge_pairs(self):
+        if not self.disable_tqdm:
+            print('make_joined_metrics_and_edge_pairs')
         self.joined_metrics = self.edges_df.merge(self.raw_metrics, on=['edge_id'], how='left')
+        self.joined_metrics = self.joined_metrics[self.joined_metrics['edge_id'].apply(lambda x: 'tunnel' not in x)]
         self.joined_metrics = self.mark_congested(self.joined_metrics)
 
         edges_to = self.joined_metrics[['edge_id', 'from_id', 'length', 'timeLoss', 'congested']]
@@ -247,32 +269,38 @@ class TunnelGenerator:
 
     def mark_congested(self, joined_metrics):
         joined_metrics['congested'] = (joined_metrics['timeLoss'] >= self.top2_perc_timeLoss).astype(np.int32)
+        if self.skip_marking_congested_neighbours:
+            return joined_metrics
         congested_streets_df = joined_metrics[joined_metrics['congested'] == CONGESTED_STREET].reset_index()
-        max_distance = 2000
+        congested_street_distance_threshold = 200
+        max_distance = congested_street_distance_threshold * 2
         # find path using all edges
         find_dijkstra_path_f = GraphUtils.find_dijkstra_path(joined_metrics, max_distance)
 
         n = len(congested_streets_df)
 
-        congested_street_distance_threshold = 200
-        for street_from_index in range(n):
+        for street_from_index in tqdm.tqdm(range(n), desc='mark congested', disable=self.disable_tqdm):
             street_from = congested_streets_df.iloc[street_from_index]
             for street_to_index in range(street_from_index + 1, n):
                 street_to = congested_streets_df.iloc[street_to_index]
                 if street_from['shape'].distance(street_to['shape']) < congested_street_distance_threshold:
                     street_from_original_index = street_from['index']
                     street_to_original_index = street_to['index']
-                    for edge_index in find_dijkstra_path_f(street_from_original_index, street_to_original_index):
-                        if joined_metrics.iloc[edge_index].congested == CONGESTED_STREET:
-                            continue
-                        joined_metrics.loc[edge_index, 'congested'] = CONGESTED_NEIGHBOUR_STREET
+                    path = find_dijkstra_path_f(street_from_original_index, street_to_original_index)
+                    if path is not None:
+                        for edge_index in path:
+                            if joined_metrics.iloc[edge_index].congested == CONGESTED_STREET:
+                                continue
+                            joined_metrics.loc[edge_index, 'congested'] = CONGESTED_NEIGHBOUR_STREET
         return joined_metrics
 
     @property
     def top2_perc_timeLoss(self):
         if self.top2_perc_timeLoss_value is None:
             filtered_timeLoss = self.joined_metrics['timeLoss'].dropna()
-            self.top2_perc_timeLoss_value = sorted(filtered_timeLoss)[int(len(filtered_timeLoss) * 0.98)]
+            if len(filtered_timeLoss) == 0:
+                raise Exception('Edges has no timeLoss (not nan) values')
+            self.top2_perc_timeLoss_value = sorted(filtered_timeLoss)[int(len(filtered_timeLoss) * self.percent_timeloss)]
         return self.top2_perc_timeLoss_value
 
     def plot_graphs(self, cmap):
@@ -301,8 +329,7 @@ class TunnelGenerator:
                 if not text_plotted:
                     plt.text(coord[0], coord[1] + 500, target_graph_id, color=graph_color)
                     text_plotted = True
-        ax.set_xlim(370000, 390000)
-        ax.set_ylim(390000, 400000)
+        self.set_axis_lims(ax)
 
         # joined_metrics[joined_metrics['timeLoss'] > top2_perc_timeLoss].plot(ax=ax)
         #     plt.show()
@@ -336,30 +363,22 @@ class TunnelGenerator:
 
         return graph_id_to_nx_graph
 
-    def plot_random_paths(self, graph_id_to_nx_graph, cmap, n_random_path=3, alpha=0.3, min_path_len=1000):
+    def generate_random_paths(self, graph_id_to_nx_graph, n_random_path=3, verbose=False):
         graph_ids = list(graph_id_to_nx_graph.keys())
-        fig, ax = plt.subplots(figsize=DEFAULT_FIGURE_SIZE)
-        self.plot_all_streets(ax)
-        colors_count = len(graph_ids) * n_random_path
-        color_step = cmap.N // (colors_count - 1)
-        colors = [cmap(i * color_step) for i in range(colors_count)]
+        good_random_paths = defaultdict(set)
+        existing_tunnel_edges_df = self.edges_df[self.edges_df['edge_id'].apply(lambda x: 'tunnel' in x)].copy()
+        existing_tunnel_edges_df.set_index('edge_id', inplace=True)
 
-        graph_id_and_path_id_to_color = {}
-        color_index = 0
         for graph_id in graph_ids:
-            for i in range(n_random_path):
-                graph_id_and_path_id_to_color[f'{graph_id}_{i}'] = colors[color_index]
-                color_index += 1
-
-        good_random_paths = []
-        for target_graph_id in graph_ids:
-            print(f'{target_graph_id=}')
-            random_paths = GraphUtils.generate_random_optimal_paths(graph_id_to_nx_graph[target_graph_id], n_random_path,
-                                                         path_length=20)
+            if verbose:
+                print(f'{graph_id=}')
+            random_paths = GraphUtils.generate_random_optimal_paths(graph_id_to_nx_graph[graph_id], n_random_path,
+                                                                    path_length=self.path_edge_count)
             for i, random_path in enumerate(random_paths):
                 path_len = self.calc_path_length(random_path)
-                if path_len < min_path_len:
-                    #                 print(f'skip path with len {path_len}')
+                if path_len < self.min_tunnel_len:
+                    if verbose:
+                        print(f'skip path with len {path_len}')
                     continue
 
                 candidate_paths = self.preprocess_path_candidates([random_path])
@@ -368,24 +387,50 @@ class TunnelGenerator:
                 random_path = candidate_paths[0]
 
                 path_len = self.calc_path_length(random_path)
-                if path_len < min_path_len:
-                    #                 print(f'skip path with len {path_len}')
+                if path_len < self.min_tunnel_len:
+                    if verbose:
+                        print(f'skip path with len {path_len}')
                     continue
+                if verbose:
+                    print(f'random_path #{i} with len {path_len}')
 
-                print(f'random_path #{i} with len {path_len}')
-                good_random_paths.append(random_path)
+                first_node, last_node = self.get_first_and_last_node_ids(random_path)
+                if first_node in existing_tunnel_edges_df.index or \
+                    last_node in existing_tunnel_edges_df.index:
+                    print(f'random_path #{i} end nodes intersect with existing tunnels')
+                    continue
+                good_random_paths[graph_id].add(tuple(random_path))
+
+        result = {graph_id: [list(path) for path in path_set] for graph_id, path_set in good_random_paths.items()}
+        self.last_generated_random_paths = result
+        return result
+
+    def plot_random_paths(self, graph_id_to_nx_graph, cmap, n_random_path=3, alpha=0.3, verbose=False):
+        good_random_paths = self.generate_random_paths(graph_id_to_nx_graph, n_random_path, verbose)
+
+        graph_ids = list(good_random_paths.keys())
+        fig, ax = plt.subplots(figsize=DEFAULT_FIGURE_SIZE)
+        self.plot_all_streets(ax)
+        colors_count = len(graph_ids) * n_random_path
+        color_step = cmap.N // (colors_count - 1)
+        colors = [cmap(i * color_step) for i in range(colors_count)]
+
+        color_index = 0
+        for target_graph_id in graph_ids:
+            graph_random_paths = good_random_paths[target_graph_id]
+            for random_path in graph_random_paths:
                 text_plotted = False
-                graph_color = graph_id_and_path_id_to_color[f'{target_graph_id}_{i}']
+                graph_color = colors[color_index]
+                color_index += 1
 
                 for edge in random_path:
                     selected_edges_df = self.get_edges_slice_by_id([edge])
                     selected_edges_df.plot(color=graph_color, ax=ax, alpha=alpha)
                     coord = selected_edges_df.iloc[0]['shape'].coords[0]
                     if not text_plotted:
-                        plt.text(coord[0], coord[1] + 100, f'{target_graph_id}_{i}', color=graph_color)
+                        plt.text(coord[0], coord[1] + 100, f'path_{target_graph_id}_{i}', color=graph_color)
                         text_plotted = True
-        ax.set_xlim(380000, 385000)
-        ax.set_ylim(392000, 400000)
+        self.set_axis_lims(ax)
         return good_random_paths
 
     @staticmethod
@@ -395,7 +440,7 @@ class TunnelGenerator:
         result = ''
         for id in ids:
             if id in sharp_turns_set:
-                if result[-1] != '|':
+                if len(result) > 0 and result[-1] != '|':
                     result += '|'
             else:
                 result += str(id) + ','
@@ -425,12 +470,16 @@ class TunnelGenerator:
         return first
 
     def add_shape_first_last_points(self, gdf):
-        for i in range(len(gdf) - 1):
-            next_i = gdf.index[i + 1]
-            i = gdf.index[i]
-            if gdf.loc[i, 'to_id'] != gdf.loc[next_i, 'from_id']:
-                gdf.loc[i, 'to_id'], gdf.loc[i, 'from_id'] = gdf.loc[i, 'from_id'], gdf.loc[i, 'to_id']
-                gdf.loc[i, 'shape'] = self.reverse_shape(gdf.loc[i, 'shape'])
+        try:
+            for i in range(len(gdf) - 1):
+                next_i = gdf.index[i + 1]
+                i = gdf.index[i]
+                if gdf.loc[i, 'to_id'] != gdf.loc[next_i, 'from_id']:
+                    gdf.loc[i, 'to_id'], gdf.loc[i, 'from_id'] = gdf.loc[i, 'from_id'], gdf.loc[i, 'to_id']
+                    gdf.loc[i, 'shape'] = self.reverse_shape(gdf.loc[i, 'shape'])
+        except ValueError as e:
+            print(gdf)
+            raise e
 
         gdf['first_point'] = gdf['from_id'].apply(self.get_node_coord)
         gdf['last_point'] = gdf['to_id'].apply(self.get_node_coord)
@@ -449,6 +498,107 @@ class TunnelGenerator:
                 result_paths.append(gdf.reset_index()['edge_id'].tolist())
         return result_paths
 
+    @staticmethod
+    def generate_tunnel_coordinates(linestring, target_distance=40, tunnel_depth=-20):
+        start_point = interpolate_linestring_point(linestring, target_distance)
+        end_point = interpolate_linestring_point(linestring, linestring.length - target_distance)
+
+        coords = list(linestring.coords)
+        for i, (x, y) in enumerate(coords):
+            p = Point(x, y)
+            if linestring.project(p) >= target_distance:
+                coords.insert(i, (start_point.x, start_point.y))
+                break
+
+        for i, (x, y) in list(enumerate(coords))[::-1]:
+            p = Point(x, y)
+            if linestring.project(p) <= linestring.length - target_distance:
+                coords.insert(i, (end_point.x, end_point.y))
+                break
+
+        downhill_last_index = coords.index((start_point.x, start_point.y))
+        uphill_first_index = coords.index((end_point.x, end_point.y))
+        # Step 3: Assign Z-coordinates for tunnel segments
+        z_coords = []
+        for i, (x, y) in enumerate(coords):
+            p = Point(x, y)
+            if i <= downhill_last_index:
+                z = (tunnel_depth / target_distance) * Point(x, y).distance(Point(coords[0]))
+            elif i >= uphill_first_index:
+                z = (tunnel_depth / target_distance) * Point(x, y).distance(Point(coords[-1]))
+            else:
+                z = tunnel_depth
+            z_coords.append((x, y, z))
+
+        return z_coords
+
+    @staticmethod
+    def make_tunnel_3d_coords(edges_df, need_plot: bool = False):
+        multi_line = MultiLineString(edges_df['shape'].to_list())
+        merged_line = ops.linemerge(multi_line)
+        ls2 = LineString(
+            [Point(c[0], c[1], c[2]) for c in TunnelGenerator.generate_tunnel_coordinates(merged_line, target_distance=40)])
+
+        if need_plot:
+            ax = plt.figure().add_subplot(projection='3d')
+
+            ls = LineString([Point(c[0], c[1], 0) for c in merged_line.coords])
+            x, y = ls.coords.xy
+            plt.plot(x, y)
+
+            x, y, z = list(zip(*list(ls2.coords)))
+            ax.set_zlim3d(-200, 0)
+            plt.plot(x, y, z)
+        return ls2
+
+    def get_first_and_last_node_ids(self, path):
+        edges_df = self.get_edges_slice_by_id(path)
+        return edges_df.iloc[0].from_id, edges_df.iloc[-1].to_id
+
+    def make_tunnel_3d_SUMOEdge(self, path, tunnel_edge_id: str, num_lanes: int = DEFAULT_TUNNEL_NUM_LANES,
+                                priority: int = DEFAULT_TUNNEL_PRIORITY, max_speed: int = DEFAULT_TUNNEL_MAX_SPEED):
+        from ..sumo.network import NodeId, SUMOCoordinate, SUMOEdge, EdgeId
+        edges_df = self.get_edges_slice_by_id(path)
+        edges_df = self.add_shape_first_last_points(edges_df)
+
+        from_node_id = edges_df.iloc[0].from_id
+        to_node_id = edges_df.iloc[-1].to_id
+        self.sumo_network._node_id_map = None  # better to remove the kludge
+        from_node = self.sumo_network.get_node(NodeId(id=from_node_id))
+        to_node = self.sumo_network.get_node(NodeId(id=to_node_id))
+
+        tunnel_3d_line = TunnelGenerator.make_tunnel_3d_coords(edges_df)
+        sumo_shape = [SUMOCoordinate(x=c[0], y=c[1], z=c[2]) for c in tunnel_3d_line.coords]
+
+        tunnel_edge = SUMOEdge(edge_id=EdgeId(id=tunnel_edge_id),
+                               from_id=from_node.node_id,
+                               to_id=to_node.node_id,
+                               shape=sumo_shape,
+                               priority=priority,
+                               num_lanes=num_lanes,
+                               max_speed=max_speed
+                               )
+        return tunnel_edge
+
+    def add_tunnels_to_sumo_network(self, good_tunnel_paths: List[str], verbose: bool = False):
+        nodes_with_tunnels = set()
+        added_tunnels_config = []
+        for i, path in enumerate(good_tunnel_paths):
+            first_node, last_node = self.get_first_and_last_node_ids(path)
+            if first_node in nodes_with_tunnels \
+                    or last_node in nodes_with_tunnels:
+                continue
+            tunnel_edge = self.make_tunnel_3d_SUMOEdge(path, f'edge_tunnel_{first_node}_to_{last_node}')
+            if tunnel_edge.edge_id.id in self.edges_df['edge_id']:
+                continue
+            self.sumo_network.edges.append(tunnel_edge)
+            added_tunnels_config.append(f'tunnel_{first_node}_to_{last_node}')
+            nodes_with_tunnels.add(first_node)
+            nodes_with_tunnels.add(last_node)
+            if verbose:
+                print(f'added {i}')
+        return added_tunnels_config
+
     def plot_tunnel(self, edges, ax, color='black'):
         warnings.filterwarnings('ignore')
         gdf = self.get_path_coordinates(edges)
@@ -461,6 +611,9 @@ class TunnelGenerator:
             [affinity.translate(gdf.iloc[-1].first_point, shift_x, shift_y), gdf.iloc[-1].last_point])
 
         gdf['new_shape'] = None
+        if len(gdf) < 3:
+            return None
+        print(len(gdf))
         gdf.loc[1:-1, 'new_shape'] = gdf[1:-1].translate(shift_x, shift_y)
 
         gdf.loc[0, 'new_shape'] = first_line
@@ -471,17 +624,20 @@ class TunnelGenerator:
         warnings.filterwarnings('default')
         return gdf
 
-    def plot_good_random_paths(self):
+    def plot_good_random_paths(self, graph_ids=None):
         graph_id_to_nx_graph = self.make_nx_graphs(self.graph_components_df)
-        sample_graph_id_to_nx_graph = {key: graph_id_to_nx_graph[key] for key in [1]}
-        good_random_paths = self.plot_random_paths(sample_graph_id_to_nx_graph, plt.cm.rainbow, 200, min_path_len=2000)
-        return good_random_paths
+        sample_graph_id_to_nx_graph = graph_id_to_nx_graph
+        if graph_ids is not None:
+            sample_graph_id_to_nx_graph = {key: graph_id_to_nx_graph[key] for key in graph_ids}
+        graph_id_to_paths = self.plot_random_paths(sample_graph_id_to_nx_graph, plt.cm.rainbow, 200)
+        return graph_id_to_paths
 
     def plot_all_streets(self, ax):
         self.joined_metrics.plot(ax=ax, color='lightgray')
 
-    def plot_tunnels(self):
-        good_random_paths = self.plot_good_random_paths()
+    def plot_tunnels(self, graph_ids=None):
+        graph_id_to_paths = self.plot_good_random_paths(graph_ids)
+        good_random_paths = [path for path_list in graph_id_to_paths.values() for path in path_list]
         for i in range(len(good_random_paths)):
             gdf = self.add_shape_first_last_points(self.get_path_coordinates(good_random_paths[i]))
             gdf = self.remove_duplicated_nodes(gdf)
@@ -497,48 +653,85 @@ class TunnelGenerator:
             # if sharp_turns:
             #     gdf.iloc[sharp_turns]['shape'].plot(ax=ax, color='red')
 
-            self.plot_tunnel(good_random_paths[i], ax)
-            ax.set_xlim(380000, 385000)
-            ax.set_ylim(392000, 400000)
+            try:
+                self.plot_tunnel(good_random_paths[i], ax)
+            except Exception as e:
+                print(e)
+            self.set_axis_lims(ax)
             plt.plot()
         return good_random_paths
 
-    def plot_intermediate_congested_streets(self):
+    def plot_intermediate_congested_streets(self, main_city_only: bool = False):
         fig, ax = plt.subplots(figsize=DEFAULT_FIGURE_SIZE)
         self.plot_all_streets(ax)
         self.joined_metrics[self.joined_metrics['congested'] == CONGESTED_NEIGHBOUR_STREET].plot(ax=ax, color='red', alpha=0.5,
                                                                                        linewidth=3)
         self.joined_metrics[self.joined_metrics['congested'] == CONGESTED_STREET].plot(ax=ax, color='black', alpha=0.5,
                                                                              linewidth=3)
-        ax.set_xlim(380000, 390000)
-        ax.set_ylim(390000, 400000)
+        if main_city_only:
+            self.set_axis_lims(ax)
+        plt.show()
 
-    def plot_congested_streets(self):
+    def plot_congested_streets(self, main_city_only: bool = False, linewidth=0.5):
         fig, ax = plt.subplots(figsize=DEFAULT_FIGURE_SIZE)
         self.plot_all_streets(ax)
-        self.joined_metrics[self.joined_metrics['timeLoss'] > self.top2_perc_timeLoss].plot(ax=ax)
-        ax.set_xlim(380000, 390000)
-        ax.set_ylim(390000, 400000)
+        self.joined_metrics[self.joined_metrics['timeLoss'] > self.top2_perc_timeLoss].plot(ax=ax, linewidth=linewidth)
+        if main_city_only:
+            self.set_axis_lims(ax)
+        plt.show()
 
     @staticmethod
-    def get_metric_color(metric_series, cmap):
-        min_metric = min(metric_series.dropna())
-        max_metric = max(metric_series.dropna())
+    def get_metric_color(metric_series, cmap, default_color: str = 'gery', logscale: bool = True):
+        metrics = metric_series.dropna().copy()
+        if logscale:
+            metrics = np.log(1 + metrics) # min value should be non-negative to get positive logscale values
+
+        min_metric = min(metrics)
+        max_metric = max(metrics)
 
         def f(value):
             if pd.isna(value):
-                return 'grey'
+                return default_color
+            if logscale:
+                value = np.log(1 + value)
             cmap_value = int(cmap.N * (value - min_metric) / (max_metric - min_metric))
             return cmap(cmap_value)
 
         return f
 
-    def plot_whole_net_metric(self, metric_name: str, city_of_manch_only: bool = False):
+    def plot_whole_net_metric(self, metric_name: str, main_city_only: bool = False, colormap=plt.cm.jet,
+                              default_color: str = 'grey', linewidth=0.5):
         fig, ax = plt.subplots(figsize=DEFAULT_FIGURE_SIZE)
-        get_metric_color_f = self.get_metric_color(self.joined_metrics[metric_name], plt.cm.jet)
+        get_metric_color_f = self.get_metric_color(self.joined_metrics[metric_name], colormap, default_color)
         self.joined_metrics[f'{metric_name}_color'] = self.joined_metrics[metric_name].apply(get_metric_color_f)
-        self.joined_metrics.plot(ax=ax, color=self.joined_metrics[f'{metric_name}_color'])
-        if city_of_manch_only:
-            ax.set_xlim(380000, 390000)
-            ax.set_ylim(390000, 400000)
+        self.joined_metrics.plot(ax=ax, color=self.joined_metrics[f'{metric_name}_color'], linewidth=linewidth)
+        if main_city_only:
+            self.set_axis_lims(ax)
+        plt.show()
 
+    def set_axis_lims(self, ax):
+        ax.set_xlim(*(self.axis_limits[0]))
+        ax.set_ylim(*(self.axis_limits[1]))
+
+    def plot_added_tunnels(self, max_tunnels_to_plot: int = 20):
+        import matplotlib.pyplot as plt
+        fig, ax = plt.subplots()
+        self.plot_all_streets(ax)
+        edges_df = self.sumo_network.make_edges_df()
+        edges_df = edges_df[-max_tunnels_to_plot:]
+        tunnels_df = edges_df[edges_df['edge_id'].apply(lambda x: 'tunnel' in x)]
+        for _, tunnel in tunnels_df.iterrows():
+            coord = tunnel['shape'].coords[0]
+            plt.text(coord[0], coord[1] + 50, tunnel['edge_id'])
+        tunnels_df.plot(ax=ax)
+        self.set_axis_lims(ax)
+        plt.plot()
+
+
+def reverse_colormap(cmap, new_name='reversed'):
+    return ListedColormap(cmap(np.linspace(0, 1, 128)[::-1]), name=new_name)
+
+
+def make_orange_colormap():
+    cm = matplotlib.colormaps.get_cmap('Oranges_r')
+    return reverse_colormap(cm)

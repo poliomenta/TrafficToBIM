@@ -1,8 +1,10 @@
 import os.path
-import pyarrow
 import geopandas as gpd
 import pandas as pd
 from shapely import wkt
+from shapely import affinity
+from shapely.ops import split as shapely_split
+from shapely.geometry import LineString
 
 
 EPSG_BNG = 27700
@@ -20,6 +22,19 @@ def convert_epsg(gdf: gpd.GeoDataFrame, to_epsg) -> gpd.GeoDataFrame:
     if to_epsg is not None and epsg != to_epsg:
         return gdf.to_crs(epsg=to_epsg)
     return gdf
+
+
+def split_linestring(ls, position=0.5):
+    point = ls.interpolate(position, True)
+    ls_split = LineString([affinity.translate(point, -0.001, 0), affinity.translate(point, 0.001, 0)])
+    result = shapely_split(ls, ls_split)
+    return list(result.geoms)
+
+
+def replace_linestring_coordinate(linestring, coord_index, point):
+    coords = list(linestring.coords)
+    coords[coord_index] = (point.x, point.y)
+    return LineString(coords)
 
 
 def batched(iterable, n=1):
@@ -51,40 +66,12 @@ def cached_pd(file_prefix, verbose=True):
 
 
 def save_geodf_to_csv(geodf, filename):
-    """
-    Save a GeoDataFrame to CSV.
-
-    Parameters:
-    - geodf: GeoDataFrame
-        The GeoDataFrame to save.
-    - filename: str
-        The path to save the CSV file.
-    """
-    # Convert geometry to WKT format
     geodf['geometry'] = geodf['geometry'].apply(lambda x: x.wkt)
-
-    # Save to CSV
     geodf.to_csv(filename, index=False)
 
 
 def read_csv_to_geodf(filename):
-    """
-    Read a CSV file into a GeoDataFrame.
-
-    Parameters:
-    - filename: str
-        The path of the CSV file to read.
-
-    Returns:
-    - GeoDataFrame
-    """
-    # Read CSV file
     df = pd.read_csv(filename)
-
-    # Convert WKT string back to a geometry object
     df['geometry'] = df['geometry'].apply(wkt.loads)
-
-    # Convert DataFrame to GeoDataFrame
     geodf = gpd.GeoDataFrame(df, geometry='geometry')
-
     return geodf

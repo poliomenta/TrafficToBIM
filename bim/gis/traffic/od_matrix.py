@@ -20,6 +20,7 @@ def get_area_code(lsoas_sindex, gm_lsoa_boundaries_gdf):
         p = Point(lon, lat)
 
         possible_matches_index = list(lsoas_sindex.nearest(p))
+        # mb here [1, :] better?
         possible_matches = gm_lsoa_boundaries_gdf.iloc[np.asarray(possible_matches_index)[:, 0]]
         precise_matches = possible_matches[possible_matches.intersects(p)]
 
@@ -90,7 +91,6 @@ class AreaOriginDestinationMatrix(object):
         return streets_gdf.geometry.apply(lambda g: get_area_code_f(g.coords[0]))
 
     def find_connected_by_streets(self, streets, gm_lsoa_boundaries_gdf, save_path=LSOA_virtual_streets_connections_path):
-
         connected = set()
         get_area_code_f = get_area_code(gm_lsoa_boundaries_gdf.sindex, gm_lsoa_boundaries_gdf)
         for street_id, street_name, street_coords in streets:
@@ -127,7 +127,7 @@ class AreaOriginDestinationMatrix(object):
         gm_lsoa_boundaries_gdf = gdf[gm_lsoa_index]
         return gm_lsoa_boundaries_gdf
 
-    # TODO: test function
+    # need to test function
     def plot_all_connected_lsoa(self,
                                 lsoa_boundaries: Optional[LSOABoundaries] = None,
                                 counties_boundary: Optional[CountiesBoundary] = None,

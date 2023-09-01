@@ -4,7 +4,7 @@ import os
 import sys
 from xml.sax.handler import ContentHandler
 from xml.sax import make_parser
-from typing import Optional, List
+from typing import Optional, List, Tuple
 import pandas as pd
 from pydantic import BaseModel
 
@@ -14,7 +14,7 @@ if 'SUMO_HOME' in os.environ:
     sys.path.append(os.path.join(os.environ['SUMO_HOME'], 'tools'))
 else:
     os.environ['SUMO_HOME'] = '/opt/homebrew/opt/sumo/share/sumo'
-#     sys.exit("please declare environment variable 'SUMO_HOME'")
+    sys.exit("please declare environment variable 'SUMO_HOME'")
 
 
 RAW_EDGE_METRIC_TRAVELTIME = 'traveltime'
@@ -30,20 +30,38 @@ EDGE_AVG_TRAVELTIME = 'avg_traveltime'
 EDGE_AVG_TIMELOSS = 'avg_timeloss'
 EDGE_TOTAL_TRIPS_COUNT = 'total_trips_count'
 
+EDGE_TOTAL_BUS_TRAVELTIME = 'total_bus_traveltime'
+EDGE_TOTAL_BUS_TIMELOSS = 'total_bus_timeloss'
+EDGE_AVG_BUS_TRAVELTIME = 'avg_bus_traveltime'
+EDGE_AVG_BUS_TIMELOSS = 'avg_bus_timeloss'
+EDGE_TOTAL_BUS_TRIPS_COUNT = 'total_bus_trips_count'
+
+FAILED_METRIC_VALUE = float('inf')
+
 
 class ExperimentMetrics(BaseModel):
     total_traveltime: float
     avg_traveltime: float
     total_timeloss: float
     total_trips_count: int
+    total_bus_traveltime: Optional[float] = None
+    total_bus_timeloss: Optional[float] = None
+    avg_bus_traveltime: Optional[float] = None
+    total_bus_trips_count: Optional[int] = None
 
     def get(self, metric_name: str):
         return self.dict()[metric_name]
 
+    @staticmethod
+    def make_failed():
+        return ExperimentMetrics(total_traveltime=FAILED_METRIC_VALUE, avg_traveltime=FAILED_METRIC_VALUE,
+                                 total_timeloss=-FAILED_METRIC_VALUE, total_trips_count=0)
+
     @classmethod
-    def make(cls, raw_metrics, sumo_trips: SUMOTrips):
+    def make(cls, raw_metrics, raw_bus_metrics, sumo_trips: SUMOTrips):
         total_traveltime = raw_metrics[RAW_EDGE_METRIC_TRAVELTIME].sum()
         total_timeloss = raw_metrics[RAW_EDGE_METRIC_TIMELOSS].sum()
+
         routes = sumo_trips.read_routes()
         total_trips_count = len(routes)
         metrics = {
@@ -53,14 +71,27 @@ class ExperimentMetrics(BaseModel):
             EDGE_AVG_TIMELOSS: total_timeloss / total_trips_count if total_trips_count > 0 else 0,
             EDGE_TOTAL_TRIPS_COUNT: total_trips_count
         }
-        return cls(**metrics)
+
+        total_bus_trips_count = len(raw_bus_metrics)
+        bus_metrics = {}
+        if total_bus_trips_count > 0 and RAW_EDGE_METRIC_TRAVELTIME in raw_bus_metrics.columns:
+            total_bus_traveltime = raw_bus_metrics[RAW_EDGE_METRIC_TRAVELTIME].sum()
+            total_bus_timeloss = raw_bus_metrics[RAW_EDGE_METRIC_TIMELOSS].sum()
+            bus_metrics = {
+                EDGE_TOTAL_BUS_TRAVELTIME: total_bus_traveltime,
+                EDGE_AVG_BUS_TRAVELTIME: total_bus_traveltime / total_bus_trips_count if total_bus_trips_count > 0 else 0,
+                EDGE_TOTAL_BUS_TIMELOSS: total_bus_timeloss,
+                EDGE_AVG_BUS_TIMELOSS: total_bus_timeloss / total_bus_trips_count if total_bus_trips_count > 0 else 0,
+                EDGE_TOTAL_BUS_TRIPS_COUNT: total_bus_trips_count
+            }
+        return cls(**metrics, **bus_metrics)
+
 
 def parse_sax(xmlfile, handler):
     myparser = make_parser()
     myparser.setContentHandler(handler)
     res = myparser.parse(xmlfile)
     return myparser, res
-
 
 class MetricsReader(ContentHandler):
     """
@@ -74,6 +105,8 @@ class MetricsReader(ContentHandler):
     def startElement(self, name, attrs):
         if name == 'edge':
             edge_id = attrs['id']
+            if 'vType' in attrs:
+                self.metric_values['vType'][edge_id] = attrs['vType']
             for metric in self.metric_names:
                 if metric in attrs:
                     self.metric_values[metric][edge_id] = float(attrs[metric])
@@ -102,22 +135,25 @@ def load_raw_trip_metrics_from_attribute_stats(agg_tripinfo_full_path, metric_na
     return agg_trip_metrics_df
 
 
-def load_raw_metrics(aggregated_info_file_path: str, metrics: Optional[List[str]] = None, drop_empty: bool = False) \
-        -> pd.DataFrame:
-    if metrics is None:
-        metrics = [
-            RAW_EDGE_METRIC_TRAVELTIME,
-            RAW_EDGE_METRIC_TIMELOSS,
-            RAW_EDGE_METRIC_OVERLAP_TRAVELTIME,
-            RAW_EDGE_METRIC_SAMPLED_SECONDS
-        ]
-    metrics_reader = MetricsReader(metrics)
-    try:
-        parse_sax(aggregated_info_file_path, metrics_reader)
-    except Exception as e:
-        print(e)
-    metric_values = metrics_reader.metric_values
-    metrics_df = pd.DataFrame(metric_values)
-    if drop_empty:
-        metrics_df.dropna(inplace=True, how='any')
-    return metrics_df
+def load_raw_metrics(aggregated_info_file_path: str, aggregated_bus_info_file_path: str,
+                     metrics: Optional[List[str]] = None, drop_empty: bool = False) -> Tuple[pd.DataFrame,pd.DataFrame]:
+    result = []
+    for file in [aggregated_info_file_path, aggregated_bus_info_file_path]:
+        if metrics is None:
+            metrics = [
+                RAW_EDGE_METRIC_TRAVELTIME,
+                RAW_EDGE_METRIC_TIMELOSS,
+                RAW_EDGE_METRIC_OVERLAP_TRAVELTIME,
+                RAW_EDGE_METRIC_SAMPLED_SECONDS,
+            ]
+        metrics_reader = MetricsReader(metrics)
+        try:
+            parse_sax(file, metrics_reader)
+        except Exception as e:
+            print(e)
+        metric_values = metrics_reader.metric_values
+        metrics_df = pd.DataFrame(metric_values)
+        if drop_empty:
+            metrics_df.dropna(inplace=True, how='any')
+        result.append(metrics_df)
+    return result[0], result[1]
