@@ -1,0 +1,943 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<additional xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/additional_file.xsd">
+  <vType id="BUS" accel="2.6" decel="4.5" sigma="0" length="10" minGap="3" maxSpeed="70" color="1,1,0" guiShape="bus" vClass="bus"/>
+  <busStop id="1800SBH1321" name="1800SBH1321" lane="edge1764_0" startPos="48.41677805285594" endPos="58.41677805285594" friendlyPos="true"/>
+  <busStop id="1800SBH1261" name="1800SBH1261" lane="edge256650_0" startPos="39.4010711985036" endPos="49.4010711985036" friendlyPos="true"/>
+  <busStop id="1800EB03871" name="1800EB03871" lane="edge62313_0" startPos="136.6044748186408" endPos="146.6044748186408" friendlyPos="true"/>
+  <busStop id="1800EB03861" name="1800EB03861" lane="edge62313_0" startPos="150.54475870849808" endPos="160.54475870849808" friendlyPos="true"/>
+  <busStop id="1800SB31521" name="1800SB31521" lane="edge256906_0" startPos="35.62740399069598" endPos="45.62740399069598" friendlyPos="true"/>
+  <busStop id="1800SB14101" name="1800SB14101" lane="edge189779_0" startPos="12.002031253740636" endPos="22.002031253740636" friendlyPos="true"/>
+  <busStop id="1800EB03811" name="1800EB03811" lane="edge218208_0" startPos="67.80998408804507" endPos="77.80998408804507" friendlyPos="true"/>
+  <busStop id="1800EB03601" name="1800EB03601" lane="edge247170_0" startPos="0.0" endPos="10.0" friendlyPos="true"/>
+  <busStop id="1800SB33441" name="1800SB33441" lane="edge216043_0" startPos="20.27107917372273" endPos="30.27107917372273" friendlyPos="true"/>
+  <busStop id="1800SB33431" name="1800SB33431" lane="edge207491_0" startPos="7.657167616429772" endPos="17.657167616429774" friendlyPos="true"/>
+  <busStop id="1800SB31331" name="1800SB31331" lane="edge61183_0" startPos="188.45221499075092" endPos="198.45221499075092" friendlyPos="true"/>
+  <busStop id="1800SB31341" name="1800SB31341" lane="edge94008_0" startPos="175.5271271982184" endPos="185.5271271982184" friendlyPos="true"/>
+  <busStop id="1800SB31041" name="1800SB31041" lane="edge107354_0" startPos="13.294462789263438" endPos="23.294462789263438" friendlyPos="true"/>
+  <busStop id="1800SB32981" name="1800SB32981" lane="edge140675_0" startPos="286.52514984592943" endPos="296.52514984592943" friendlyPos="true"/>
+  <busStop id="1800SB31901" name="1800SB31901" lane="edge219804_0" startPos="106.54873658740087" endPos="116.54873658740087" friendlyPos="true"/>
+  <busStop id="1800SB32971" name="1800SB32971" lane="edge198988_0" startPos="43.1844714721569" endPos="53.1844714721569" friendlyPos="true"/>
+  <busStop id="1800SB31051" name="1800SB31051" lane="edge253409_0" startPos="45.184429374290794" endPos="55.184429374290794" friendlyPos="true"/>
+  <busStop id="1800EB03731" name="1800EB03731" lane="edge163876_0" startPos="137.29171103089803" endPos="147.29171103089803" friendlyPos="true"/>
+  <busStop id="1800EB03721" name="1800EB03721" lane="edge163876_0" startPos="129.87225495482306" endPos="139.87225495482306" friendlyPos="true"/>
+  <busStop id="1800SB14091" name="1800SB14091" lane="edge189779_0" startPos="44.579297998125114" endPos="54.579297998125114" friendlyPos="true"/>
+  <busStop id="1800SB33151" name="1800SB33151" lane="edge161437_0" startPos="59.12667695234056" endPos="69.12667695234056" friendlyPos="true"/>
+  <busStop id="1800SB33161" name="1800SB33161" lane="edge94039_0" startPos="75.67572880643407" endPos="85.67572880643407" friendlyPos="true"/>
+  <busStop id="1800SB02541" name="1800SB02541" lane="edge140603_0" startPos="59.26987499584138" endPos="69.26987499584138" friendlyPos="true"/>
+  <busStop id="1800EB01281" name="1800EB01281" lane="edge173582_0" startPos="156.9822159752641" endPos="166.9822159752641" friendlyPos="true"/>
+  <busStop id="1800EB01241" name="1800EB01241" lane="edge173582_0" startPos="131.95075729692536" endPos="141.95075729692536" friendlyPos="true"/>
+  <busStop id="1800SB08661" name="1800SB08661" lane="edge90830_0" startPos="13.887582757827367" endPos="23.887582757827367" friendlyPos="true"/>
+  <busStop id="1800EB03761" name="1800EB03761" lane="edge218199_0" startPos="25.41010972727479" endPos="35.41010972727479" friendlyPos="true"/>
+  <busStop id="1800EB04151" name="1800EB04151" lane="edge256569_0" startPos="228.91148778738398" endPos="238.91148778738398" friendlyPos="true"/>
+  <busStop id="1800EB04141" name="1800EB04141" lane="edge256569_0" startPos="138.2340415190282" endPos="148.2340415190282" friendlyPos="true"/>
+  <busStop id="1800SJ30191" name="1800SJ30191" lane="edge195575_0" startPos="1.8918856654438931" endPos="11.891885665443894" friendlyPos="true"/>
+  <busStop id="1800SJ30201" name="1800SJ30201" lane="edge54299_0" startPos="53.644205109387755" endPos="63.644205109387755" friendlyPos="true"/>
+  <busStop id="1800EB04231" name="1800EB04231" lane="edge217220_0" startPos="19.548230221668774" endPos="29.548230221668774" friendlyPos="true"/>
+  <busStop id="1800EB04221" name="1800EB04221" lane="edge217220_0" startPos="62.56074464265852" endPos="72.56074464265852" friendlyPos="true"/>
+  <busStop id="1800EB13801" name="1800EB13801" lane="edge143910_0" startPos="290.2858346427635" endPos="300.2858346427635" friendlyPos="true"/>
+  <busStop id="1800EB13811" name="1800EB13811" lane="edge256477_0" startPos="129.23370578464036" endPos="139.23370578464036" friendlyPos="true"/>
+  <busStop id="1800SB16571" name="1800SB16571" lane="edge256517_0" startPos="46.47001801544828" endPos="56.47001801544828" friendlyPos="true"/>
+  <busStop id="1800SB33421" name="1800SB33421" lane="edge255679_0" startPos="247.53028342837715" endPos="257.5302834283772" friendlyPos="true"/>
+  <busStop id="1800SB33411" name="1800SB33411" lane="edge3217_0" startPos="39.60949321767454" endPos="49.60949321767454" friendlyPos="true"/>
+  <busStop id="1800SB16561" name="1800SB16561" lane="edge256517_0" startPos="15.54754620139331" endPos="25.54754620139331" friendlyPos="true"/>
+  <busStop id="1800SBH0351" name="1800SBH0351" lane="edge143977_0" startPos="58.015477694678864" endPos="68.01547769467886" friendlyPos="true"/>
+  <busStop id="1800SB15431" name="1800SB15431" lane="edge144715_0" startPos="25.590791768531602" endPos="35.5907917685316" friendlyPos="true"/>
+  <busStop id="1800SB33811" name="1800SB33811" lane="edge241705_0" startPos="54.57931139643169" endPos="64.57931139643169" friendlyPos="true"/>
+  <busStop id="1800SB32831" name="1800SB32831" lane="edge30615_0" startPos="137.19402401527148" endPos="147.19402401527148" friendlyPos="true"/>
+  <busStop id="1800SB32871" name="1800SB32871" lane="edge200034_0" startPos="1.2823592261576344" endPos="11.282359226157634" friendlyPos="true"/>
+  <busStop id="1800SB33381" name="1800SB33381" lane="edge147663_0" startPos="32.05220489245741" endPos="42.05220489245741" friendlyPos="true"/>
+  <busStop id="1800SB32881" name="1800SB32881" lane="edge256447_0" startPos="154.8026322998448" endPos="164.8026322998448" friendlyPos="true"/>
+  <busStop id="1800ZZMABAR1" name="1800ZZMABAR1" lane="edge256447_0" startPos="105.15747298530475" endPos="115.15747298530475" friendlyPos="true"/>
+  <busStop id="1800ZZMABAR2" name="1800ZZMABAR2" lane="edge203684_0" startPos="14.259181504678516" endPos="24.259181504678516" friendlyPos="true"/>
+  <busStop id="1800ZZMABAR3" name="1800ZZMABAR3" lane="edge198664_0" startPos="16.495216957537018" endPos="26.495216957537018" friendlyPos="true"/>
+  <busStop id="1800ZZMABAR4" name="1800ZZMABAR4" lane="edge2046_0" startPos="15.3393019816593" endPos="25.3393019816593" friendlyPos="true"/>
+  <busStop id="1800SB34091" name="1800SB34091" lane="edge103721_0" startPos="19.77680711878036" endPos="29.77680711878036" friendlyPos="true"/>
+  <busStop id="1800SB34101" name="1800SB34101" lane="edge103721_0" startPos="0.0" endPos="10.0" friendlyPos="true"/>
+  <busStop id="1800EB34381" name="1800EB34381" lane="edge205958_0" startPos="15.905781096093634" endPos="25.905781096093634" friendlyPos="true"/>
+  <busStop id="1800EB02061" name="1800EB02061" lane="edge194970_0" startPos="19.329041475734144" endPos="29.329041475734144" friendlyPos="true"/>
+  <busStop id="1800EB02071" name="1800EB02071" lane="edge253674_0" startPos="29.050806970798554" endPos="39.050806970798554" friendlyPos="true"/>
+  <busStop id="1800EB01641" name="1800EB01641" lane="edge218734_0" startPos="95.30567311742826" endPos="105.30567311742826" friendlyPos="true"/>
+  <busStop id="1800EB04371" name="1800EB04371" lane="edge186420_0" startPos="3.2451667292226816" endPos="13.245166729222682" friendlyPos="true"/>
+  <busStop id="1800EB04361" name="1800EB04361" lane="edge250422_0" startPos="62.66225107047802" endPos="72.66225107047802" friendlyPos="true"/>
+  <busStop id="1800EB34351" name="1800EB34351" lane="edge217409_0" startPos="24.38016094049093" endPos="34.38016094049093" friendlyPos="true"/>
+  <busStop id="1800EB01951" name="1800EB01951" lane="edge218123_0" startPos="102.66409817916643" endPos="112.66409817916643" friendlyPos="true"/>
+  <busStop id="1800EB04391" name="1800EB04391" lane="edge186419_0" startPos="92.19454508354437" endPos="102.19454508354437" friendlyPos="true"/>
+  <busStop id="1800EB01651" name="1800EB01651" lane="edge62350_0" startPos="19.28218076875894" endPos="29.28218076875894" friendlyPos="true"/>
+  <busStop id="1800EB05931" name="1800EB05931" lane="edge206045_0" startPos="15.887504109275874" endPos="25.887504109275874" friendlyPos="true"/>
+  <busStop id="1800SB33281" name="1800SB33281" lane="edge255647_0" startPos="81.21070933317502" endPos="91.21070933317502" friendlyPos="true"/>
+  <busStop id="1800SB33291" name="1800SB33291" lane="edge255647_0" startPos="39.73734747722738" endPos="49.73734747722738" friendlyPos="true"/>
+  <busStop id="1800SB09551" name="1800SB09551" lane="edge198279_0" startPos="29.07356401139276" endPos="39.07356401139276" friendlyPos="true"/>
+  <busStop id="1800SB09571" name="1800SB09571" lane="edge197943_0" startPos="36.2554385548124" endPos="46.2554385548124" friendlyPos="true"/>
+  <busStop id="1800EB34361" name="1800EB34361" lane="edge217382_0" startPos="59.508946412274454" endPos="69.50894641227445" friendlyPos="true"/>
+  <busStop id="1800SJ32081" name="1800SJ32081" lane="edge94203_0" startPos="47.98617974235477" endPos="57.98617974235477" friendlyPos="true"/>
+  <busStop id="1800SJH1911" name="1800SJH1911" lane="edge209485_0" startPos="6.763247525312062" endPos="16.76324752531206" friendlyPos="true"/>
+  <busStop id="1800SJ32071" name="1800SJ32071" lane="edge94203_0" startPos="66.86930695864626" endPos="76.86930695864626" friendlyPos="true"/>
+  <busStop id="1800SB31971" name="1800SB31971" lane="edge257526_0" startPos="66.63783743229133" endPos="76.63783743229133" friendlyPos="true"/>
+  <busStop id="1800SB08831" name="1800SB08831" lane="edge247157_0" startPos="38.72607744452443" endPos="48.72607744452443" friendlyPos="true"/>
+  <busStop id="1800EB13861" name="1800EB13861" lane="edge255797_0" startPos="79.90320824862798" endPos="89.90320824862798" friendlyPos="true"/>
+  <busStop id="1800EB13851" name="1800EB13851" lane="edge255768_0" startPos="158.02254355316063" endPos="168.02254355316063" friendlyPos="true"/>
+  <busStop id="1800SB31451" name="1800SB31451" lane="edge173743_0" startPos="120.46093932691278" endPos="130.46093932691278" friendlyPos="true"/>
+  <busStop id="1800SB12161" name="1800SB12161" lane="edge257472_0" startPos="26.162545831007126" endPos="36.16254583100712" friendlyPos="true"/>
+  <busStop id="1800SB12151" name="1800SB12151" lane="edge186297_0" startPos="7.237622808956157" endPos="17.237622808956157" friendlyPos="true"/>
+  <busStop id="1800SB30011" name="1800SB30011" lane="edge169461_0" startPos="50.353391516335925" endPos="60.353391516335925" friendlyPos="true"/>
+  <busStop id="1800SJ30021" name="1800SJ30021" lane="edge252184_0" startPos="12.232252935564116" endPos="22.232252935564116" friendlyPos="true"/>
+  <busStop id="1800EB03641" name="1800EB03641" lane="edge217730_0" startPos="0.0" endPos="10.0" friendlyPos="true"/>
+  <busStop id="1800EB03651" name="1800EB03651" lane="edge216514_0" startPos="0.7126690707642593" endPos="10.71266907076426" friendlyPos="true"/>
+  <busStop id="1800SBT0131" name="1800SBT0131" lane="edge1906_0" startPos="28.403680530267657" endPos="38.40368053026766" friendlyPos="true"/>
+  <busStop id="1800SB32611" name="1800SB32611" lane="edge198971_0" startPos="12.8449000926027" endPos="22.8449000926027" friendlyPos="true"/>
+  <busStop id="1800SB32621" name="1800SB32621" lane="edge162699_0" startPos="9.317824000945581" endPos="19.31782400094558" friendlyPos="true"/>
+  <busStop id="1800SB32481" name="1800SB32481" lane="edge208085_0" startPos="30.162830804782594" endPos="40.162830804782594" friendlyPos="true"/>
+  <busStop id="1800SB32491" name="1800SB32491" lane="edge208085_0" startPos="17.66999651594178" endPos="27.66999651594178" friendlyPos="true"/>
+  <busStop id="1800SB31091" name="1800SB31091" lane="edge256172_0" startPos="14.610377821138457" endPos="24.610377821138457" friendlyPos="true"/>
+  <busStop id="1800SBH1501" name="1800SBH1501" lane="edge325_0" startPos="26.63876517382622" endPos="36.638765173826215" friendlyPos="true"/>
+  <busStop id="1800EB03951" name="1800EB03951" lane="edge255811_0" startPos="34.6256769619476" endPos="44.6256769619476" friendlyPos="true"/>
+  <busStop id="1800EB03961" name="1800EB03961" lane="edge255811_0" startPos="16.389361705259564" endPos="26.389361705259564" friendlyPos="true"/>
+  <busStop id="1800EB04591" name="1800EB04591" lane="edge195524_0" startPos="14.747969177809228" endPos="24.747969177809228" friendlyPos="true"/>
+  <busStop id="1800EB04251" name="1800EB04251" lane="edge170124_0" startPos="3.4949049092923232" endPos="13.494904909292323" friendlyPos="true"/>
+  <busStop id="1800EB04601" name="1800EB04601" lane="edge195524_0" startPos="6.678984183230018" endPos="16.678984183230018" friendlyPos="true"/>
+  <busStop id="1800BAGE0" name="1800BAGE0" lane="edge189533_0" startPos="30.76781437762314" endPos="40.76781437762314" friendlyPos="true"/>
+  <busStop id="1800BAGE1" name="1800BAGE1" lane="edge108943_0" startPos="6.480246816390704" endPos="16.480246816390704" friendlyPos="true"/>
+  <busStop id="1800SB14021" name="1800SB14021" lane="edge189531_0" startPos="4.173868357346537" endPos="14.173868357346537" friendlyPos="true"/>
+  <busStop id="1800SB33821" name="1800SB33821" lane="edge2044_0" startPos="35.505453204492575" endPos="45.505453204492575" friendlyPos="true"/>
+  <busStop id="1800ZZMABNR2" name="1800ZZMABNR2" lane="edge50980_0" startPos="3.2573821403080494" endPos="13.25738214030805" friendlyPos="true"/>
+  <busStop id="1800ZZMABNR1" name="1800ZZMABNR1" lane="edge50980_0" startPos="18.196795857416504" endPos="28.196795857416504" friendlyPos="true"/>
+  <busStop id="1800SBH0851" name="1800SBH0851" lane="edge255731_0" startPos="24.94560612301487" endPos="34.94560612301487" friendlyPos="true"/>
+  <busStop id="1800EBH0611" name="1800EBH0611" lane="edge215583_0" startPos="1.7790450397362862" endPos="11.779045039736285" friendlyPos="true"/>
+  <busStop id="1800EB27611" name="1800EB27611" lane="edge88694_0" startPos="9.353900972094495" endPos="19.353900972094493" friendlyPos="true"/>
+  <busStop id="1800EB27621" name="1800EB27621" lane="edge203889_0" startPos="23.243943110775657" endPos="33.24394311077566" friendlyPos="true"/>
+  <busStop id="1800SB14651" name="1800SB14651" lane="edge245966_0" startPos="73.90571334250691" endPos="83.90571334250691" friendlyPos="true"/>
+  <busStop id="1800EB04201" name="1800EB04201" lane="edge255778_0" startPos="30.108496191363727" endPos="40.10849619136373" friendlyPos="true"/>
+  <busStop id="1800EB04211" name="1800EB04211" lane="edge255778_0" startPos="0.0" endPos="10.0" friendlyPos="true"/>
+  <busStop id="1800EB02991" name="1800EB02991" lane="edge15323_0" startPos="3.316524363300328" endPos="13.316524363300328" friendlyPos="true"/>
+  <busStop id="1800EB03591" name="1800EB03591" lane="edge217367_0" startPos="40.12789904018019" endPos="50.12789904018019" friendlyPos="true"/>
+  <busStop id="1800SB09931" name="1800SB09931" lane="edge253707_0" startPos="42.93360109052572" endPos="52.93360109052572" friendlyPos="true"/>
+  <busStop id="1800SB16311" name="1800SB16311" lane="edge117362_0" startPos="46.773925381836044" endPos="56.773925381836044" friendlyPos="true"/>
+  <busStop id="1800EB07711" name="1800EB07711" lane="edge173190_0" startPos="15.438534166447315" endPos="25.438534166447315" friendlyPos="true"/>
+  <busStop id="1800SB32761" name="1800SB32761" lane="edge148883_0" startPos="23.97432421819766" endPos="33.97432421819766" friendlyPos="true"/>
+  <busStop id="1800SB32791" name="1800SB32791" lane="edge256917_0" startPos="0.0" endPos="10.0" friendlyPos="true"/>
+  <busStop id="1800SBE0621" name="1800SBE0621" lane="edge957_0" startPos="15.647529099827445" endPos="25.647529099827445" friendlyPos="true"/>
+  <busStop id="1800CNBS001" name="1800CNBS001" lane="edge148883_0" startPos="4.514139586816121" endPos="14.514139586816121" friendlyPos="true"/>
+  <busStop id="1800SB32771" name="1800SB32771" lane="edge148883_0" startPos="11.895626871371256" endPos="21.895626871371256" friendlyPos="true"/>
+  <busStop id="1800SB32801" name="1800SB32801" lane="edge256917_0" startPos="14.912043117162526" endPos="24.912043117162526" friendlyPos="true"/>
+  <busStop id="1800SB32751" name="1800SB32751" lane="edge170510_0" startPos="80.06280113150827" endPos="90.06280113150827" friendlyPos="true"/>
+  <busStop id="1800SBE0641" name="1800SBE0641" lane="edge148802_0" startPos="0.0" endPos="10.0" friendlyPos="true"/>
+  <busStop id="1800SB32781" name="1800SB32781" lane="edge64709_0" startPos="34.9893754062243" endPos="44.9893754062243" friendlyPos="true"/>
+  <busStop id="1800SB32641" name="1800SB32641" lane="edge256665_0" startPos="30.245600629980864" endPos="40.24560062998086" friendlyPos="true"/>
+  <busStop id="1800SB32461" name="1800SB32461" lane="edge208087_0" startPos="4.526669306672305" endPos="14.526669306672305" friendlyPos="true"/>
+  <busStop id="1800SB32471" name="1800SB32471" lane="edge2694_0" startPos="53.324256791762984" endPos="63.324256791762984" friendlyPos="true"/>
+  <busStop id="1800SB14271" name="1800SB14271" lane="edge15342_0" startPos="26.62745873275985" endPos="36.62745873275985" friendlyPos="true"/>
+  <busStop id="1800SB30601" name="1800SB30601" lane="edge140894_0" startPos="27.062428861841717" endPos="37.06242886184172" friendlyPos="true"/>
+  <busStop id="1800ZZMACHO2" name="1800ZZMACHO2" lane="edge2555_0" startPos="0.0" endPos="10.0" friendlyPos="true"/>
+  <busStop id="1800ZZMACHO3" name="1800ZZMACHO3" lane="edge2555_0" startPos="21.25439464961785" endPos="31.25439464961785" friendlyPos="true"/>
+  <busStop id="1800SB34381" name="1800SB34381" lane="edge256717_0" startPos="22.514953471803224" endPos="32.514953471803224" friendlyPos="true"/>
+  <busStop id="1800SBH0061" name="1800SBH0061" lane="edge256716_0" startPos="99.41765077709987" endPos="109.41765077709987" friendlyPos="true"/>
+  <busStop id="1800EB03701" name="1800EB03701" lane="edge218170_0" startPos="12.907106386963399" endPos="22.9071063869634" friendlyPos="true"/>
+  <busStop id="1800SB11961" name="1800SB11961" lane="edge1153_0" startPos="98.41606604010721" endPos="108.41606604010721" friendlyPos="true"/>
+  <busStop id="1800SB12361" name="1800SB12361" lane="edge1221_0" startPos="22.803243066480928" endPos="32.80324306648093" friendlyPos="true"/>
+  <busStop id="1800SB31361" name="1800SB31361" lane="edge256021_0" startPos="49.78107832718916" endPos="59.78107832718916" friendlyPos="true"/>
+  <busStop id="1800SB31851" name="1800SB31851" lane="edge140870_0" startPos="23.97476445072246" endPos="33.97476445072246" friendlyPos="true"/>
+  <busStop id="1800SB31651" name="1800SB31651" lane="edge256007_0" startPos="10.145980045721018" endPos="20.145980045721018" friendlyPos="true"/>
+  <busStop id="1800SB31661" name="1800SB31661" lane="edge204291_0" startPos="4.856062764521969" endPos="14.856062764521969" friendlyPos="true"/>
+  <busStop id="1800SB31911" name="1800SB31911" lane="edge203010_0" startPos="240.52668816297054" endPos="250.52668816297054" friendlyPos="true"/>
+  <busStop id="1800SB11971" name="1800SB11971" lane="edge1153_0" startPos="60.58283404705665" endPos="70.58283404705665" friendlyPos="true"/>
+  <busStop id="1800SB12371" name="1800SB12371" lane="edge1221_0" startPos="13.614685006717185" endPos="23.614685006717185" friendlyPos="true"/>
+  <busStop id="1800SB31351" name="1800SB31351" lane="edge255455_0" startPos="25.607034581938905" endPos="35.607034581938905" friendlyPos="true"/>
+  <busStop id="1800EB04421" name="1800EB04421" lane="edge246569_0" startPos="67.92983040735655" endPos="77.92983040735655" friendlyPos="true"/>
+  <busStop id="1800EB01821" name="1800EB01821" lane="edge246578_0" startPos="12.916078608094082" endPos="22.916078608094082" friendlyPos="true"/>
+  <busStop id="1800EB04431" name="1800EB04431" lane="edge180995_0" startPos="7.7185772527597525" endPos="17.71857725275975" friendlyPos="true"/>
+  <busStop id="1800EB01831" name="1800EB01831" lane="edge246578_0" startPos="0.0" endPos="10.0" friendlyPos="true"/>
+  <busStop id="1800EBH0761" name="1800EBH0761" lane="edge217422_0" startPos="26.18672791539567" endPos="36.18672791539567" friendlyPos="true"/>
+  <busStop id="1800EB04321" name="1800EB04321" lane="edge256460_0" startPos="50.28482111999634" endPos="60.28482111999634" friendlyPos="true"/>
+  <busStop id="1800EB04311" name="1800EB04311" lane="edge253723_0" startPos="31.31041079099606" endPos="41.31041079099606" friendlyPos="true"/>
+  <busStop id="1800SG40471" name="1800SG40471" lane="edge239888_0" startPos="2.814496040551294" endPos="12.814496040551294" friendlyPos="true"/>
+  <busStop id="1800SG40651" name="1800SG40651" lane="edge249983_0" startPos="54.073388724270536" endPos="64.07338872427053" friendlyPos="true"/>
+  <busStop id="1800SB33701" name="1800SB33701" lane="edge197891_0" startPos="34.305861590150826" endPos="44.305861590150826" friendlyPos="true"/>
+  <busStop id="1800SB33841" name="1800SB33841" lane="edge161171_0" startPos="36.4939406338631" endPos="46.4939406338631" friendlyPos="true"/>
+  <busStop id="1800SB33851" name="1800SB33851" lane="edge161171_0" startPos="33.54192963026479" endPos="43.54192963026479" friendlyPos="true"/>
+  <busStop id="1800SB30111" name="1800SB30111" lane="edge196304_0" startPos="17.319923419100043" endPos="27.319923419100043" friendlyPos="true"/>
+  <busStop id="1800SJ30121" name="1800SJ30121" lane="edge196304_0" startPos="32.39290238932721" endPos="42.39290238932721" friendlyPos="true"/>
+  <busStop id="1800EB06091" name="1800EB06091" lane="edge218299_0" startPos="22.7203589316623" endPos="32.720358931662304" friendlyPos="true"/>
+  <busStop id="1800SB15121" name="1800SB15121" lane="edge185576_0" startPos="1.22928026332628" endPos="11.229280263326281" friendlyPos="true"/>
+  <busStop id="1800SB34451" name="1800SB34451" lane="edge255644_0" startPos="4.0593592038429716" endPos="14.059359203842972" friendlyPos="true"/>
+  <busStop id="1800SB34461" name="1800SB34461" lane="edge255644_0" startPos="54.301303684841386" endPos="64.30130368484139" friendlyPos="true"/>
+  <busStop id="1800SJ30401" name="1800SJ30401" lane="edge222742_0" startPos="30.040823622718705" endPos="40.040823622718705" friendlyPos="true"/>
+  <busStop id="1800SJ30411" name="1800SJ30411" lane="edge198977_0" startPos="44.973755817952316" endPos="54.973755817952316" friendlyPos="true"/>
+  <busStop id="1800SJ00321" name="1800SJ00321" lane="edge198828_0" startPos="0.0" endPos="10.0" friendlyPos="true"/>
+  <busStop id="1800SJ30511" name="1800SJ30511" lane="edge199287_0" startPos="44.6285139313269" endPos="54.6285139313269" friendlyPos="true"/>
+  <busStop id="1800EB03631" name="1800EB03631" lane="edge62063_0" startPos="22.82514847462545" endPos="32.82514847462545" friendlyPos="true"/>
+  <busStop id="1800EB03621" name="1800EB03621" lane="edge204364_0" startPos="36.73641047092519" endPos="46.73641047092519" friendlyPos="true"/>
+  <busStop id="1800SB33391" name="1800SB33391" lane="edge255680_0" startPos="0.940324627490857" endPos="10.940324627490856" friendlyPos="true"/>
+  <busStop id="1800SB33401" name="1800SB33401" lane="edge3216_0" startPos="47.43499125903612" endPos="57.43499125903612" friendlyPos="true"/>
+  <busStop id="1800EB03841" name="1800EB03841" lane="edge216503_0" startPos="9.751984579725752" endPos="19.75198457972575" friendlyPos="true"/>
+  <busStop id="1800EB03681" name="1800EB03681" lane="edge195938_0" startPos="28.531522062436586" endPos="38.531522062436586" friendlyPos="true"/>
+  <busStop id="1800EB03691" name="1800EB03691" lane="edge195938_0" startPos="20.44706981038615" endPos="30.44706981038615" friendlyPos="true"/>
+  <busStop id="1800EB18001" name="1800EB18001" lane="edge255954_0" startPos="59.10630549676986" endPos="69.10630549676986" friendlyPos="true"/>
+  <busStop id="1800EB04131" name="1800EB04131" lane="edge195938_0" startPos="264.7334770352947" endPos="274.7334770352947" friendlyPos="true"/>
+  <busStop id="1800EB03671" name="1800EB03671" lane="edge195938_0" startPos="156.3604780081303" endPos="166.3604780081303" friendlyPos="true"/>
+  <busStop id="1800EB03891" name="1800EB03891" lane="edge256574_0" startPos="16.076429207827278" endPos="26.076429207827278" friendlyPos="true"/>
+  <busStop id="1800EB03881" name="1800EB03881" lane="edge256574_0" startPos="68.76997515946788" endPos="78.76997515946788" friendlyPos="true"/>
+  <busStop id="1800EB06111" name="1800EB06111" lane="edge218150_0" startPos="37.28248306525859" endPos="47.28248306525859" friendlyPos="true"/>
+  <busStop id="1800EB06341" name="1800EB06341" lane="edge218294_0" startPos="0.0" endPos="10.0" friendlyPos="true"/>
+  <busStop id="1800EB08011" name="1800EB08011" lane="edge253611_0" startPos="52.3908147107723" endPos="62.3908147107723" friendlyPos="true"/>
+  <busStop id="1800SG12591" name="1800SG12591" lane="edge253611_0" startPos="74.91707563735903" endPos="84.91707563735903" friendlyPos="true"/>
+  <busStop id="1800SB32811" name="1800SB32811" lane="edge187627_0" startPos="15.758691013143498" endPos="25.758691013143498" friendlyPos="true"/>
+  <busStop id="1800SB32821" name="1800SB32821" lane="edge187627_0" startPos="53.86733068884188" endPos="63.86733068884188" friendlyPos="true"/>
+  <busStop id="1800EB01671" name="1800EB01671" lane="edge131275_0" startPos="16.47899096169938" endPos="26.47899096169938" friendlyPos="true"/>
+  <busStop id="1800EB01801" name="1800EB01801" lane="edge246581_0" startPos="79.66753415433607" endPos="89.66753415433607" friendlyPos="true"/>
+  <busStop id="1800EB00031" name="1800EB00031" lane="edge140779_0" startPos="69.48857346117748" endPos="79.48857346117748" friendlyPos="true"/>
+  <busStop id="1800EB01841" name="1800EB01841" lane="edge246581_0" startPos="105.45538630980548" endPos="115.45538630980548" friendlyPos="true"/>
+  <busStop id="1800SB32861" name="1800SB32861" lane="edge148809_0" startPos="21.55289808071291" endPos="31.55289808071291" friendlyPos="true"/>
+  <busStop id="1800SB33691" name="1800SB33691" lane="edge50979_0" startPos="19.557329626878087" endPos="29.557329626878087" friendlyPos="true"/>
+  <busStop id="1800SB33661" name="1800SB33661" lane="edge256583_0" startPos="30.19441887576486" endPos="40.19441887576486" friendlyPos="true"/>
+  <busStop id="1800EB03011" name="1800EB03011" lane="edge204249_0" startPos="20.059080044869855" endPos="30.059080044869855" friendlyPos="true"/>
+  <busStop id="1800SB31961" name="1800SB31961" lane="edge206332_0" startPos="89.46589410544942" endPos="99.46589410544942" friendlyPos="true"/>
+  <busStop id="1800SB31951" name="1800SB31951" lane="edge81157_0" startPos="2.486306242905549" endPos="12.486306242905549" friendlyPos="true"/>
+  <busStop id="1800EB01931" name="1800EB01931" lane="edge27_0" startPos="115.24398119152323" endPos="125.24398119152323" friendlyPos="true"/>
+  <busStop id="1800EB01661" name="1800EB01661" lane="edge27_0" startPos="301.82548501446456" endPos="311.82548501446456" friendlyPos="true"/>
+  <busStop id="1800EB04401" name="1800EB04401" lane="edge170239_0" startPos="63.184703906921655" endPos="73.18470390692165" friendlyPos="true"/>
+  <busStop id="1800SBT0201" name="1800SBT0201" lane="edge80572_0" startPos="42.43382573107981" endPos="52.43382573107981" friendlyPos="true"/>
+  <busStop id="1800SBT0621" name="1800SBT0621" lane="edge253606_0" startPos="43.70174875308048" endPos="53.70174875308048" friendlyPos="true"/>
+  <busStop id="1800SB14871" name="1800SB14871" lane="edge5654_0" startPos="4.107333123355341" endPos="14.10733312335534" friendlyPos="true"/>
+  <busStop id="1800SB12381" name="1800SB12381" lane="edge253606_0" startPos="50.968490771338935" endPos="60.968490771338935" friendlyPos="true"/>
+  <busStop id="1800SB34141" name="1800SB34141" lane="edge216100_0" startPos="19.117213003259494" endPos="29.117213003259494" friendlyPos="true"/>
+  <busStop id="1800ZZMADID2" name="1800ZZMADID2" lane="edge253727_0" startPos="0.0" endPos="10.0" friendlyPos="true"/>
+  <busStop id="1800ZZMADID1" name="1800ZZMADID1" lane="edge5653_0" startPos="73.27619992891302" endPos="83.27619992891302" friendlyPos="true"/>
+  <busStop id="1800SB33301" name="1800SB33301" lane="edge255646_0" startPos="95.41628999583371" endPos="105.41628999583371" friendlyPos="true"/>
+  <busStop id="1800SB33311" name="1800SB33311" lane="edge256634_0" startPos="9.56605720877187" endPos="19.56605720877187" friendlyPos="true"/>
+  <busStop id="1800SBH0241" name="1800SBH0241" lane="edge144726_0" startPos="64.8911927098677" endPos="74.8911927098677" friendlyPos="true"/>
+  <busStop id="1800SBH0591" name="1800SBH0591" lane="edge256623_0" startPos="68.95987718711805" endPos="78.95987718711805" friendlyPos="true"/>
+  <busStop id="1800EB04491" name="1800EB04491" lane="edge217419_0" startPos="60.10018454803951" endPos="70.10018454803951" friendlyPos="true"/>
+  <busStop id="1800EB04501" name="1800EB04501" lane="edge245930_0" startPos="44.26937835696441" endPos="54.26937835696441" friendlyPos="true"/>
+  <busStop id="1800EB10511" name="1800EB10511" lane="edge62475_0" startPos="36.88170067750667" endPos="46.88170067750667" friendlyPos="true"/>
+  <busStop id="1800EB01081" name="1800EB01081" lane="edge218165_0" startPos="18.190427284524482" endPos="28.190427284524482" friendlyPos="true"/>
+  <busStop id="1800EB05031" name="1800EB05031" lane="edge215558_0" startPos="28.096571085259782" endPos="38.09657108525978" friendlyPos="true"/>
+  <busStop id="1800EB04121" name="1800EB04121" lane="edge256572_0" startPos="309.7241837585458" endPos="319.7241837585458" friendlyPos="true"/>
+  <busStop id="1800EB03911" name="1800EB03911" lane="edge255831_0" startPos="11.474803084349418" endPos="21.474803084349418" friendlyPos="true"/>
+  <busStop id="1800SB33671" name="1800SB33671" lane="edge256648_0" startPos="11.306669284354914" endPos="21.306669284354914" friendlyPos="true"/>
+  <busStop id="1800SB33681" name="1800SB33681" lane="edge208576_0" startPos="26.060725685715113" endPos="36.06072568571511" friendlyPos="true"/>
+  <busStop id="1800EB01991" name="1800EB01991" lane="edge140772_0" startPos="28.362970624508357" endPos="38.36297062450836" friendlyPos="true"/>
+  <busStop id="1800EB01591" name="1800EB01591" lane="edge209847_0" startPos="37.20971134837616" endPos="47.20971134837616" friendlyPos="true"/>
+  <busStop id="1800EB03931" name="1800EB03931" lane="edge181395_0" startPos="13.417224976053475" endPos="23.417224976053475" friendlyPos="true"/>
+  <busStop id="1800EB12901" name="1800EB12901" lane="edge216509_0" startPos="10.611236704565117" endPos="20.611236704565115" friendlyPos="true"/>
+  <busStop id="1800SB34041" name="1800SB34041" lane="edge197878_0" startPos="38.008086939980146" endPos="48.008086939980146" friendlyPos="true"/>
+  <busStop id="1800EBH2151" name="1800EBH2151" lane="edge85385_0" startPos="48.35913585680175" endPos="58.35913585680175" friendlyPos="true"/>
+  <busStop id="1800ZZMAFIR" name="1800ZZMAFIR" lane="edge110838_0" startPos="58.57792826172818" endPos="68.57792826172818" friendlyPos="true"/>
+  <busStop id="1800SB14041" name="1800SB14041" lane="edge253713_0" startPos="159.23635083088936" endPos="169.23635083088936" friendlyPos="true"/>
+  <busStop id="1800SB34071" name="1800SB34071" lane="edge189683_0" startPos="4.977665953424713" endPos="14.977665953424713" friendlyPos="true"/>
+  <busStop id="1800SB34081" name="1800SB34081" lane="edge253729_0" startPos="0.0" endPos="10.0" friendlyPos="true"/>
+  <busStop id="1800SB14051" name="1800SB14051" lane="edge253713_0" startPos="22.506296042181596" endPos="32.506296042181596" friendlyPos="true"/>
+  <busStop id="1800SB33911" name="1800SB33911" lane="edge196452_0" startPos="64.32856871887475" endPos="74.32856871887475" friendlyPos="true"/>
+  <busStop id="1800SB15151" name="1800SB15151" lane="edge140867_0" startPos="0.0" endPos="10.0" friendlyPos="true"/>
+  <busStop id="1800SB33931" name="1800SB33931" lane="edge140867_0" startPos="18.53904590992704" endPos="28.53904590992704" friendlyPos="true"/>
+  <busStop id="1800SB33941" name="1800SB33941" lane="edge136870_0" startPos="3.0431857933328015" endPos="13.043185793332801" friendlyPos="true"/>
+  <busStop id="1800SG06471" name="1800SG06471" lane="edge205130_0" startPos="17.585061827223807" endPos="27.585061827223807" friendlyPos="true"/>
+  <busStop id="1800SB31701" name="1800SB31701" lane="edge206407_0" startPos="64.04336745449883" endPos="74.04336745449883" friendlyPos="true"/>
+  <busStop id="1800SB31311" name="1800SB31311" lane="edge256452_0" startPos="24.382015222564934" endPos="34.38201522256493" friendlyPos="true"/>
+  <busStop id="1800SB31321" name="1800SB31321" lane="edge206481_0" startPos="33.396634062769756" endPos="43.396634062769756" friendlyPos="true"/>
+  <busStop id="1800SG40441" name="1800SG40441" lane="edge257518_0" startPos="50.611689499256464" endPos="60.611689499256464" friendlyPos="true"/>
+  <busStop id="1800SG12561" name="1800SG12561" lane="edge196326_0" startPos="1.7742858243110966" endPos="11.774285824311097" friendlyPos="true"/>
+  <busStop id="1800SBH0691" name="1800SBH0691" lane="edge1820_0" startPos="60.75707643675041" endPos="70.75707643675041" friendlyPos="true"/>
+  <busStop id="1800SG40431" name="1800SG40431" lane="edge72930_0" startPos="35.8500519059141" endPos="45.8500519059141" friendlyPos="true"/>
+  <busStop id="1800SG04691" name="1800SG04691" lane="edge209963_0" startPos="9.351335922691494" endPos="19.351335922691494" friendlyPos="true"/>
+  <busStop id="1800EB13891" name="1800EB13891" lane="edge131160_0" startPos="78.02978476623234" endPos="88.02978476623234" friendlyPos="true"/>
+  <busStop id="1800EB13901" name="1800EB13901" lane="edge131159_0" startPos="17.213238935470482" endPos="27.213238935470482" friendlyPos="true"/>
+  <busStop id="1800EB07801" name="1800EB07801" lane="edge207175_0" startPos="56.20098823447218" endPos="66.20098823447218" friendlyPos="true"/>
+  <busStop id="1800SB33961" name="1800SB33961" lane="edge257362_0" startPos="47.70920407072655" endPos="57.70920407072655" friendlyPos="true"/>
+  <busStop id="1800SB31631" name="1800SB31631" lane="edge192423_0" startPos="5.764446981244538" endPos="15.764446981244538" friendlyPos="true"/>
+  <busStop id="1800SB31381" name="1800SB31381" lane="edge116459_0" startPos="53.75181448838" endPos="63.75181448838" friendlyPos="true"/>
+  <busStop id="1800SB31371" name="1800SB31371" lane="edge116458_0" startPos="82.69612688470164" endPos="92.69612688470164" friendlyPos="true"/>
+  <busStop id="1800SB31641" name="1800SB31641" lane="edge255953_0" startPos="103.40263551836557" endPos="113.40263551836557" friendlyPos="true"/>
+  <busStop id="1800SBH1661" name="1800SBH1661" lane="edge256025_0" startPos="30.75781738643274" endPos="40.75781738643274" friendlyPos="true"/>
+  <busStop id="1800EB13831" name="1800EB13831" lane="edge117523_0" startPos="28.028040868365494" endPos="38.028040868365494" friendlyPos="true"/>
+  <busStop id="1800EB13821" name="1800EB13821" lane="edge117522_0" startPos="36.80292782369719" endPos="46.80292782369719" friendlyPos="true"/>
+  <busStop id="1800EB18531" name="1800EB18531" lane="edge225704_0" startPos="8.488421839585419" endPos="18.48842183958542" friendlyPos="true"/>
+  <busStop id="1800SB32671" name="1800SB32671" lane="edge256916_0" startPos="45.955399975925715" endPos="55.955399975925715" friendlyPos="true"/>
+  <busStop id="1800SB14141" name="1800SB14141" lane="edge257237_0" startPos="53.446759720881246" endPos="63.446759720881246" friendlyPos="true"/>
+  <busStop id="1800SB16741" name="1800SB16741" lane="edge1337_0" startPos="106.17343147974755" endPos="116.17343147974755" friendlyPos="true"/>
+  <busStop id="1800SB16731" name="1800SB16731" lane="edge1337_0" startPos="74.34018323721699" endPos="84.34018323721699" friendlyPos="true"/>
+  <busStop id="1800SB31821" name="1800SB31821" lane="edge2786_0" startPos="17.883573025673915" endPos="27.883573025673915" friendlyPos="true"/>
+  <busStop id="1800EB07951" name="1800EB07951" lane="edge255857_0" startPos="15.416300183624678" endPos="25.416300183624678" friendlyPos="true"/>
+  <busStop id="1800SB31831" name="1800SB31831" lane="edge2788_0" startPos="0.0" endPos="10.0" friendlyPos="true"/>
+  <busStop id="1800EB07911" name="1800EB07911" lane="edge163785_0" startPos="73.12571956159834" endPos="83.12571956159834" friendlyPos="true"/>
+  <busStop id="1800EB07901" name="1800EB07901" lane="edge250418_0" startPos="12.861197768182155" endPos="22.861197768182155" friendlyPos="true"/>
+  <busStop id="1800SB15661" name="1800SB15661" lane="edge257526_0" startPos="12.059510605947526" endPos="22.059510605947526" friendlyPos="true"/>
+  <busStop id="1800EB01921" name="1800EB01921" lane="edge187405_0" startPos="23.618813145158622" endPos="33.618813145158626" friendlyPos="true"/>
+  <busStop id="1800SB13601" name="1800SB13601" lane="edge250413_0" startPos="38.81796316151816" endPos="48.81796316151816" friendlyPos="true"/>
+  <busStop id="1800EB01851" name="1800EB01851" lane="edge245402_0" startPos="50.377965202956034" endPos="60.377965202956034" friendlyPos="true"/>
+  <busStop id="1800EB07981" name="1800EB07981" lane="edge208367_0" startPos="21.572968384636" endPos="31.572968384636" friendlyPos="true"/>
+  <busStop id="1800SG06491" name="1800SG06491" lane="edge3356_0" startPos="32.39153387339977" endPos="42.39153387339977" friendlyPos="true"/>
+  <busStop id="1800SG12601" name="1800SG12601" lane="edge3356_0" startPos="32.13044934692936" endPos="42.13044934692936" friendlyPos="true"/>
+  <busStop id="1800SJ30481" name="1800SJ30481" lane="edge199557_0" startPos="140.62573008884848" endPos="150.62573008884848" friendlyPos="true"/>
+  <busStop id="1800SJ30471" name="1800SJ30471" lane="edge222810_0" startPos="15.927117775926071" endPos="25.92711777592607" friendlyPos="true"/>
+  <busStop id="1800SJ30461" name="1800SJ30461" lane="edge54459_0" startPos="93.11252719014722" endPos="103.11252719014722" friendlyPos="true"/>
+  <busStop id="1800SB34281" name="1800SB34281" lane="edge186893_0" startPos="16.464484255431316" endPos="26.464484255431316" friendlyPos="true"/>
+  <busStop id="1800SB34271" name="1800SB34271" lane="edge186893_0" startPos="94.92197436202663" endPos="104.92197436202663" friendlyPos="true"/>
+  <busStop id="1800SB14151" name="1800SB14151" lane="edge257237_0" startPos="95.4131508313859" endPos="105.4131508313859" friendlyPos="true"/>
+  <busStop id="1800SB11151" name="1800SB11151" lane="edge255981_0" startPos="33.57666571162727" endPos="43.57666571162727" friendlyPos="true"/>
+  <busStop id="1800EB13761" name="1800EB13761" lane="edge199640_0" startPos="11.41423734698273" endPos="21.41423734698273" friendlyPos="true"/>
+  <busStop id="1800EB13771" name="1800EB13771" lane="edge199641_0" startPos="47.2183945420525" endPos="57.2183945420525" friendlyPos="true"/>
+  <busStop id="1800SB15761" name="1800SB15761" lane="edge256510_0" startPos="29.90268528011152" endPos="39.90268528011152" friendlyPos="true"/>
+  <busStop id="1800SB15751" name="1800SB15751" lane="edge256510_0" startPos="10.121236924800906" endPos="20.121236924800904" friendlyPos="true"/>
+  <busStop id="1800SB14161" name="1800SB14161" lane="edge256913_0" startPos="0.0" endPos="10.0" friendlyPos="true"/>
+  <busStop id="1800SB32961" name="1800SB32961" lane="edge24891_0" startPos="204.66606647694533" endPos="214.66606647694533" friendlyPos="true"/>
+  <busStop id="1800SB32951" name="1800SB32951" lane="edge88067_0" startPos="205.28449782756496" endPos="215.28449782756496" friendlyPos="true"/>
+  <busStop id="1800EB01881" name="1800EB01881" lane="edge140840_0" startPos="7.678799744884737" endPos="17.678799744884735" friendlyPos="true"/>
+  <busStop id="1800EB01771" name="1800EB01771" lane="edge140840_0" startPos="7.7457090368951995" endPos="17.7457090368952" friendlyPos="true"/>
+  <busStop id="1800EB34391" name="1800EB34391" lane="edge205964_0" startPos="6.079654709955559" endPos="16.07965470995556" friendlyPos="true"/>
+  <busStop id="1800EB34401" name="1800EB34401" lane="edge180902_0" startPos="0.5575500640572564" endPos="10.557550064057256" friendlyPos="true"/>
+  <busStop id="1800SG17361" name="1800SG17361" lane="edge240847_0" startPos="73.10473444399545" endPos="83.10473444399545" friendlyPos="true"/>
+  <busStop id="1800SB32631" name="1800SB32631" lane="edge146156_0" startPos="23.593688505925787" endPos="33.59368850592578" friendlyPos="true"/>
+  <busStop id="1800SB32601" name="1800SB32601" lane="edge72924_0" startPos="26.842383226599093" endPos="36.8423832265991" friendlyPos="true"/>
+  <busStop id="1800SB30031" name="1800SB30031" lane="edge142323_0" startPos="17.101327954213573" endPos="27.101327954213573" friendlyPos="true"/>
+  <busStop id="1800SJ30171" name="1800SJ30171" lane="edge255495_0" startPos="58.82315079773335" endPos="68.82315079773335" friendlyPos="true"/>
+  <busStop id="1800SJ30041" name="1800SJ30041" lane="edge253416_0" startPos="1.7590609353170974" endPos="11.759060935317098" friendlyPos="true"/>
+  <busStop id="1800SJ30181" name="1800SJ30181" lane="edge54307_0" startPos="39.65559240856468" endPos="49.65559240856468" friendlyPos="true"/>
+  <busStop id="1800SB09951" name="1800SB09951" lane="edge194811_0" startPos="31.006584831354843" endPos="41.00658483135484" friendlyPos="true"/>
+  <busStop id="1800EB04611" name="1800EB04611" lane="edge189754_0" startPos="6.5619071426316875" endPos="16.56190714263169" friendlyPos="true"/>
+  <busStop id="1800EB20431" name="1800EB20431" lane="edge189754_0" startPos="7.151979456083245" endPos="17.151979456083247" friendlyPos="true"/>
+  <busStop id="1800EBH1991" name="1800EBH1991" lane="edge218174_0" startPos="82.05158138268685" endPos="92.05158138268685" friendlyPos="true"/>
+  <busStop id="1800EB13781" name="1800EB13781" lane="edge170230_0" startPos="20.878993816604535" endPos="30.878993816604535" friendlyPos="true"/>
+  <busStop id="1800EB13791" name="1800EB13791" lane="edge143911_0" startPos="30.928561917861288" endPos="40.92856191786129" friendlyPos="true"/>
+  <busStop id="1800EB04261" name="1800EB04261" lane="edge5772_0" startPos="23.41410765306108" endPos="33.41410765306108" friendlyPos="true"/>
+  <busStop id="1800EB03781" name="1800EB03781" lane="edge1786_0" startPos="28.43878990821961" endPos="38.43878990821961" friendlyPos="true"/>
+  <busStop id="1800SBH5001" name="1800SBH5001" lane="edge257221_0" startPos="61.61693793662374" endPos="71.61693793662374" friendlyPos="true"/>
+  <busStop id="1800SBH4991" name="1800SBH4991" lane="edge553_0" startPos="50.11744918749093" endPos="60.11744918749093" friendlyPos="true"/>
+  <busStop id="1800SB14071" name="1800SB14071" lane="edge143978_0" startPos="33.78533518940771" endPos="43.78533518940771" friendlyPos="true"/>
+  <busStop id="1800EB03971" name="1800EB03971" lane="edge140770_0" startPos="20.35580260438638" endPos="30.35580260438638" friendlyPos="true"/>
+  <busStop id="1800SBH4971" name="1800SBH4971" lane="edge257484_0" startPos="11.790075437424193" endPos="21.790075437424193" friendlyPos="true"/>
+  <busStop id="1800SBH0231" name="1800SBH0231" lane="edge189723_0" startPos="18.59413229856387" endPos="28.59413229856387" friendlyPos="true"/>
+  <busStop id="1800EB03981" name="1800EB03981" lane="edge143979_0" startPos="56.194878287919394" endPos="66.1948782879194" friendlyPos="true"/>
+  <busStop id="1800SB14121" name="1800SB14121" lane="edge255888_0" startPos="23.678397557841915" endPos="33.67839755784192" friendlyPos="true"/>
+  <busStop id="1800SB14131" name="1800SB14131" lane="edge255888_0" startPos="48.495676089597424" endPos="58.495676089597424" friendlyPos="true"/>
+  <busStop id="1800SB14061" name="1800SB14061" lane="edge257477_0" startPos="8.198389424000363" endPos="18.19838942400036" friendlyPos="true"/>
+  <busStop id="1800EB04241" name="1800EB04241" lane="edge181341_0" startPos="15.788575801150152" endPos="25.788575801150152" friendlyPos="true"/>
+  <busStop id="1800EB07851" name="1800EB07851" lane="edge70312_0" startPos="40.152597379290974" endPos="50.152597379290974" friendlyPos="true"/>
+  <busStop id="1800SB33711" name="1800SB33711" lane="edge244628_0" startPos="22.160595712615546" endPos="32.160595712615546" friendlyPos="true"/>
+  <busStop id="1800SB34361" name="1800SB34361" lane="edge217223_0" startPos="21.736275563916912" endPos="31.736275563916912" friendlyPos="true"/>
+  <busStop id="1800EB00621" name="1800EB00621" lane="edge253636_0" startPos="22.322606519960782" endPos="32.322606519960786" friendlyPos="true"/>
+  <busStop id="1800EB02041" name="1800EB02041" lane="edge253636_0" startPos="53.65876959615994" endPos="63.65876959615994" friendlyPos="true"/>
+  <busStop id="1800EB27591" name="1800EB27591" lane="edge189464_0" startPos="0.0" endPos="10.0" friendlyPos="true"/>
+  <busStop id="1800EB27601" name="1800EB27601" lane="edge189464_0" startPos="4.9401986918534355" endPos="14.940198691853436" friendlyPos="true"/>
+  <busStop id="1800EB03741" name="1800EB03741" lane="edge83620_0" startPos="23.66870281222675" endPos="33.668702812226755" friendlyPos="true"/>
+  <busStop id="1800EB03751" name="1800EB03751" lane="edge83620_0" startPos="14.730853509462914" endPos="24.730853509462914" friendlyPos="true"/>
+  <busStop id="1800EB01781" name="1800EB01781" lane="edge245343_0" startPos="32.025356745520945" endPos="42.025356745520945" friendlyPos="true"/>
+  <busStop id="1800EB01871" name="1800EB01871" lane="edge140843_0" startPos="4.332645387552386" endPos="14.332645387552386" friendlyPos="true"/>
+  <busStop id="1800EB03991" name="1800EB03991" lane="edge199630_0" startPos="26.21357788520698" endPos="36.21357788520698" friendlyPos="true"/>
+  <busStop id="1800EB04001" name="1800EB04001" lane="edge178811_0" startPos="35.33643296008677" endPos="45.33643296008677" friendlyPos="true"/>
+  <busStop id="1800SB15111" name="1800SB15111" lane="edge173743_0" startPos="306.23608464966753" endPos="316.23608464966753" friendlyPos="true"/>
+  <busStop id="1800SB31601" name="1800SB31601" lane="edge144734_0" startPos="79.3415087625594" endPos="89.3415087625594" friendlyPos="true"/>
+  <busStop id="1800SB31461" name="1800SB31461" lane="edge148780_0" startPos="30.309350507405732" endPos="40.30935050740573" friendlyPos="true"/>
+  <busStop id="1800SB30981" name="1800SB30981" lane="edge140755_0" startPos="196.14008213570816" endPos="206.14008213570816" friendlyPos="true"/>
+  <busStop id="1800SB30991" name="1800SB30991" lane="edge140757_0" startPos="50.81335851379567" endPos="60.81335851379567" friendlyPos="true"/>
+  <busStop id="1800EB10541" name="1800EB10541" lane="edge162369_0" startPos="102.89675237198169" endPos="112.89675237198169" friendlyPos="true"/>
+  <busStop id="1800EB14971" name="1800EB14971" lane="edge162369_0" startPos="104.56465320628085" endPos="114.56465320628085" friendlyPos="true"/>
+  <busStop id="1800EBT0441" name="1800EBT0441" lane="edge62417_0" startPos="10.441189195833532" endPos="20.44118919583353" friendlyPos="true"/>
+  <busStop id="1800EB06141" name="1800EB06141" lane="edge140849_0" startPos="86.96133297144753" endPos="96.96133297144753" friendlyPos="true"/>
+  <busStop id="1800EB04451" name="1800EB04451" lane="edge140852_0" startPos="53.13550825221107" endPos="63.13550825221107" friendlyPos="true"/>
+  <busStop id="1800EB04441" name="1800EB04441" lane="edge140852_0" startPos="30.440732574302793" endPos="40.44073257430279" friendlyPos="true"/>
+  <busStop id="1800EB06181" name="1800EB06181" lane="edge225705_0" startPos="24.398631015256985" endPos="34.39863101525698" friendlyPos="true"/>
+  <busStop id="1800EB06301" name="1800EB06301" lane="edge84283_0" startPos="8.633866944592445" endPos="18.633866944592445" friendlyPos="true"/>
+  <busStop id="1800EB06311" name="1800EB06311" lane="edge140849_0" startPos="100.24702308677477" endPos="110.24702308677477" friendlyPos="true"/>
+  <busStop id="1800SB30551" name="1800SB30551" lane="edge65580_0" startPos="48.052222661323555" endPos="58.052222661323555" friendlyPos="true"/>
+  <busStop id="1800SB30561" name="1800SB30561" lane="edge65580_0" startPos="19.66684475471558" endPos="29.66684475471558" friendlyPos="true"/>
+  <busStop id="1800EB01601" name="1800EB01601" lane="edge140773_0" startPos="95.28356496447675" endPos="105.28356496447675" friendlyPos="true"/>
+  <busStop id="1800EB01981" name="1800EB01981" lane="edge140771_0" startPos="61.39100313723645" endPos="71.39100313723645" friendlyPos="true"/>
+  <busStop id="1800EB10561" name="1800EB10561" lane="edge218099_0" startPos="14.452625804601283" endPos="24.452625804601283" friendlyPos="true"/>
+  <busStop id="1800EB10551" name="1800EB10551" lane="edge218068_0" startPos="18.253586022891756" endPos="28.253586022891756" friendlyPos="true"/>
+  <busStop id="1800SB15971" name="1800SB15971" lane="edge148779_0" startPos="119.24782817629986" endPos="129.24782817629986" friendlyPos="true"/>
+  <busStop id="1800SB16491" name="1800SB16491" lane="edge148779_0" startPos="64.16517497706279" endPos="74.16517497706279" friendlyPos="true"/>
+  <busStop id="1800SBH0121" name="1800SBH0121" lane="edge255738_0" startPos="24.11830461335217" endPos="34.118304613352166" friendlyPos="true"/>
+  <busStop id="1800SB31611" name="1800SB31611" lane="edge144734_0" startPos="96.08427504552897" endPos="106.08427504552897" friendlyPos="true"/>
+  <busStop id="1800EB03001" name="1800EB03001" lane="edge224249_0" startPos="32.97329059584399" endPos="42.97329059584399" friendlyPos="true"/>
+  <busStop id="1800EBH0401" name="1800EBH0401" lane="edge77863_0" startPos="27.457777187515028" endPos="37.45777718751503" friendlyPos="true"/>
+  <busStop id="1800SB32431" name="1800SB32431" lane="edge88064_0" startPos="72.98689078766337" endPos="82.98689078766337" friendlyPos="true"/>
+  <busStop id="1800SB14931" name="1800SB14931" lane="edge198565_0" startPos="11.254913955684483" endPos="21.254913955684483" friendlyPos="true"/>
+  <busStop id="1800SB31981" name="1800SB31981" lane="edge185076_0" startPos="25.11988144755292" endPos="35.11988144755292" friendlyPos="true"/>
+  <busStop id="1800SB14941" name="1800SB14941" lane="edge257528_0" startPos="155.51918922223206" endPos="165.51918922223206" friendlyPos="true"/>
+  <busStop id="1800EB03551" name="1800EB03551" lane="edge179750_0" startPos="87.38112017976353" endPos="97.38112017976353" friendlyPos="true"/>
+  <busStop id="1800EB13871" name="1800EB13871" lane="edge143916_0" startPos="16.847275117997885" endPos="26.847275117997885" friendlyPos="true"/>
+  <busStop id="1800SB12171" name="1800SB12171" lane="edge257366_0" startPos="216.82823892665044" endPos="226.82823892665044" friendlyPos="true"/>
+  <busStop id="1800EB03901" name="1800EB03901" lane="edge255829_0" startPos="18.151795396296336" endPos="28.151795396296336" friendlyPos="true"/>
+  <busStop id="1800EB03921" name="1800EB03921" lane="edge183861_0" startPos="100.05353150733099" endPos="110.05353150733099" friendlyPos="true"/>
+  <busStop id="1800EB13881" name="1800EB13881" lane="edge143914_0" startPos="61.5439526918086" endPos="71.5439526918086" friendlyPos="true"/>
+  <busStop id="1800SB12141" name="1800SB12141" lane="edge160186_0" startPos="38.56021899397902" endPos="48.56021899397902" friendlyPos="true"/>
+  <busStop id="1800SB33981" name="1800SB33981" lane="edge97718_0" startPos="3.056598827399055" endPos="13.056598827399055" friendlyPos="true"/>
+  <busStop id="1800SB33341" name="1800SB33341" lane="edge63986_0" startPos="23.143357484974956" endPos="33.143357484974956" friendlyPos="true"/>
+  <busStop id="1800SB34441" name="1800SB34441" lane="edge2007_0" startPos="28.9335842078781" endPos="38.9335842078781" friendlyPos="true"/>
+  <busStop id="1800SB33131" name="1800SB33131" lane="edge256558_0" startPos="42.17806036401155" endPos="52.17806036401155" friendlyPos="true"/>
+  <busStop id="1800SB33261" name="1800SB33261" lane="edge786_0" startPos="43.68039352790383" endPos="53.68039352790383" friendlyPos="true"/>
+  <busStop id="1800SB33251" name="1800SB33251" lane="edge256661_0" startPos="365.38896092092523" endPos="375.38896092092523" friendlyPos="true"/>
+  <busStop id="1800MLDTHRD0" name="1800MLDTHRD0" lane="edge2018_0" startPos="188.94420073238584" endPos="198.94420073238584" friendlyPos="true"/>
+  <busStop id="1800MLDTHRD1" name="1800MLDTHRD1" lane="edge257478_0" startPos="60.815900569321585" endPos="70.81590056932158" friendlyPos="true"/>
+  <busStop id="1800EB03581" name="1800EB03581" lane="edge218088_0" startPos="99.17406918060459" endPos="109.17406918060459" friendlyPos="true"/>
+  <busStop id="1800SB34051" name="1800SB34051" lane="edge196980_0" startPos="11.803560718590251" endPos="21.80356071859025" friendlyPos="true"/>
+  <busStop id="1800SBH0261" name="1800SBH0261" lane="edge144717_0" startPos="116.24422481020306" endPos="126.24422481020306" friendlyPos="true"/>
+  <busStop id="1800SBH0681" name="1800SBH0681" lane="edge144717_0" startPos="3.3503356992525255" endPos="13.350335699252526" friendlyPos="true"/>
+  <busStop id="1800SJ30151" name="1800SJ30151" lane="edge254365_0" startPos="39.7200711223306" endPos="49.7200711223306" friendlyPos="true"/>
+  <busStop id="1800SJ30161" name="1800SJ30161" lane="edge254363_0" startPos="11.560714584196226" endPos="21.560714584196226" friendlyPos="true"/>
+  <busStop id="1800SB33491" name="1800SB33491" lane="edge88075_0" startPos="24.677620268973357" endPos="34.67762026897336" friendlyPos="true"/>
+  <busStop id="1800SB33481" name="1800SB33481" lane="edge156175_0" startPos="33.9998955532736" endPos="43.9998955532736" friendlyPos="true"/>
+  <busStop id="1800SB33471" name="1800SB33471" lane="edge161169_0" startPos="107.26967163447956" endPos="117.26967163447956" friendlyPos="true"/>
+  <busStop id="1800SB33881" name="1800SB33881" lane="edge253748_0" startPos="24.78066223888646" endPos="34.780662238886464" friendlyPos="true"/>
+  <busStop id="1800SB33891" name="1800SB33891" lane="edge196451_0" startPos="70.24868254416349" endPos="80.24868254416349" friendlyPos="true"/>
+  <busStop id="1800SBH0141" name="1800SBH0141" lane="edge255737_0" startPos="15.376550508728485" endPos="25.376550508728485" friendlyPos="true"/>
+  <busStop id="1800SBH0131" name="1800SBH0131" lane="edge186005_0" startPos="66.33260771430312" endPos="76.33260771430312" friendlyPos="true"/>
+  <busStop id="1800EB03711" name="1800EB03711" lane="edge218206_0" startPos="28.42745140269598" endPos="38.42745140269598" friendlyPos="true"/>
+  <busStop id="1800SBH0721" name="1800SBH0721" lane="edge1820_0" startPos="2.504113693957761" endPos="12.50411369395776" friendlyPos="true"/>
+  <busStop id="1800SG40461" name="1800SG40461" lane="edge239883_0" startPos="76.20721692278423" endPos="86.20721692278423" friendlyPos="true"/>
+  <busStop id="1800SG40491" name="1800SG40491" lane="edge27914_0" startPos="5.387507609747791" endPos="15.387507609747791" friendlyPos="true"/>
+  <busStop id="1800SB33211" name="1800SB33211" lane="edge103740_0" startPos="177.22170616344212" endPos="187.22170616344212" friendlyPos="true"/>
+  <busStop id="1800SG40301" name="1800SG40301" lane="edge92_0" startPos="27.42465095199651" endPos="37.42465095199651" friendlyPos="true"/>
+  <busStop id="1800SB33051" name="1800SB33051" lane="edge256143_0" startPos="66.6177596073491" endPos="76.6177596073491" friendlyPos="true"/>
+  <busStop id="1800EB04581" name="1800EB04581" lane="edge161137_0" startPos="38.89015516664324" endPos="48.89015516664324" friendlyPos="true"/>
+  <busStop id="1800EB13911" name="1800EB13911" lane="edge62009_0" startPos="103.71117488359278" endPos="113.71117488359278" friendlyPos="true"/>
+  <busStop id="1800EB13931" name="1800EB13931" lane="edge141524_0" startPos="65.56043695394462" endPos="75.56043695394462" friendlyPos="true"/>
+  <busStop id="1800EB04571" name="1800EB04571" lane="edge199630_0" startPos="196.24168210343458" endPos="206.24168210343458" friendlyPos="true"/>
+  <busStop id="1800EB05051" name="1800EB05051" lane="edge169843_0" startPos="29.573234793182387" endPos="39.57323479318239" friendlyPos="true"/>
+  <busStop id="1800SB31411" name="1800SB31411" lane="edge64388_0" startPos="83.75277250080538" endPos="93.75277250080538" friendlyPos="true"/>
+  <busStop id="1800SB30581" name="1800SB30581" lane="edge224417_0" startPos="9.041672855941396" endPos="19.041672855941396" friendlyPos="true"/>
+  <busStop id="1800SB31281" name="1800SB31281" lane="edge208667_0" startPos="48.84095200799084" endPos="58.84095200799084" friendlyPos="true"/>
+  <busStop id="1800SB31391" name="1800SB31391" lane="edge198976_0" startPos="117.29534306732243" endPos="127.29534306732243" friendlyPos="true"/>
+  <busStop id="1800SB31621" name="1800SB31621" lane="edge192423_0" startPos="129.2782124849753" endPos="139.2782124849753" friendlyPos="true"/>
+  <busStop id="1800SB31881" name="1800SB31881" lane="edge245975_0" startPos="109.77931520838912" endPos="119.77931520838912" friendlyPos="true"/>
+  <busStop id="1800SB30571" name="1800SB30571" lane="edge198138_0" startPos="0.0" endPos="10.0" friendlyPos="true"/>
+  <busStop id="1800SB06421" name="1800SB06421" lane="edge256028_0" startPos="12.1067077777033" endPos="22.1067077777033" friendlyPos="true"/>
+  <busStop id="1800SB31441" name="1800SB31441" lane="edge2926_0" startPos="33.60117439600842" endPos="43.60117439600842" friendlyPos="true"/>
+  <busStop id="1800SB30961" name="1800SB30961" lane="edge199092_0" startPos="36.324298219199406" endPos="46.324298219199406" friendlyPos="true"/>
+  <busStop id="1800SB30971" name="1800SB30971" lane="edge199093_0" startPos="62.65530418678394" endPos="72.65530418678394" friendlyPos="true"/>
+  <busStop id="1800SBH1581" name="1800SBH1581" lane="edge113133_0" startPos="0.0" endPos="10.0" friendlyPos="true"/>
+  <busStop id="1800SBH1271" name="1800SBH1271" lane="edge1159_0" startPos="34.326687380595075" endPos="44.326687380595075" friendlyPos="true"/>
+  <busStop id="1800SB32891" name="1800SB32891" lane="edge148810_0" startPos="42.21121032466894" endPos="52.21121032466894" friendlyPos="true"/>
+  <busStop id="1800SB33181" name="1800SB33181" lane="edge170299_0" startPos="52.45848163344763" endPos="62.45848163344763" friendlyPos="true"/>
+  <busStop id="1800SB08931" name="1800SB08931" lane="edge97223_0" startPos="16.88244974250808" endPos="26.88244974250808" friendlyPos="true"/>
+  <busStop id="1800SB33831" name="1800SB33831" lane="edge97223_0" startPos="45.934237278880396" endPos="55.934237278880396" friendlyPos="true"/>
+  <busStop id="1800SB33581" name="1800SB33581" lane="edge88078_0" startPos="52.82578116168383" endPos="62.82578116168383" friendlyPos="true"/>
+  <busStop id="1800SB32901" name="1800SB32901" lane="edge256557_0" startPos="99.09580704960266" endPos="109.09580704960266" friendlyPos="true"/>
+  <busStop id="1800EB17701" name="1800EB17701" lane="edge204553_0" startPos="38.96898103848936" endPos="48.96898103848936" friendlyPos="true"/>
+  <busStop id="1800SB33141" name="1800SB33141" lane="edge161437_0" startPos="60.71531865443467" endPos="70.71531865443467" friendlyPos="true"/>
+  <busStop id="1800SB32651" name="1800SB32651" lane="edge255763_0" startPos="12.347477130449725" endPos="22.347477130449725" friendlyPos="true"/>
+  <busStop id="1800EB17711" name="1800EB17711" lane="edge64742_0" startPos="68.30238896325392" endPos="78.30238896325392" friendlyPos="true"/>
+  <busStop id="1800EBH1961" name="1800EBH1961" lane="edge228497_0" startPos="28.94564901095103" endPos="38.94564901095103" friendlyPos="true"/>
+  <busStop id="1800SJ30261" name="1800SJ30261" lane="edge222568_0" startPos="12.831139023048156" endPos="22.831139023048156" friendlyPos="true"/>
+  <busStop id="1800SJ30251" name="1800SJ30251" lane="edge222568_0" startPos="21.389398404386718" endPos="31.389398404386718" friendlyPos="true"/>
+  <busStop id="1800SB34031" name="1800SB34031" lane="edge197877_0" startPos="5.89966517603505" endPos="15.89966517603505" friendlyPos="true"/>
+  <busStop id="1800SB17821" name="1800SB17821" lane="edge216132_0" startPos="0.0" endPos="10.0" friendlyPos="true"/>
+  <busStop id="1800SB34061" name="1800SB34061" lane="edge256719_0" startPos="7.995475881661591" endPos="17.99547588166159" friendlyPos="true"/>
+  <busStop id="1800EB07831" name="1800EB07831" lane="edge70313_0" startPos="13.383667500714758" endPos="23.383667500714758" friendlyPos="true"/>
+  <busStop id="1800EB01971" name="1800EB01971" lane="edge140774_0" startPos="32.485478151037434" endPos="42.485478151037434" friendlyPos="true"/>
+  <busStop id="1800EB01611" name="1800EB01611" lane="edge218120_0" startPos="79.0102519932725" endPos="89.0102519932725" friendlyPos="true"/>
+  <busStop id="1800EBH2141" name="1800EBH2141" lane="edge215580_0" startPos="13.006590443329706" endPos="23.006590443329706" friendlyPos="true"/>
+  <busStop id="1800SBH0881" name="1800SBH0881" lane="edge255645_0" startPos="29.946105849577343" endPos="39.94610584957734" friendlyPos="true"/>
+  <busStop id="1800SBH1911" name="1800SBH1911" lane="edge1673_0" startPos="51.37754338986007" endPos="61.37754338986007" friendlyPos="true"/>
+  <busStop id="1800SB33591" name="1800SB33591" lane="edge256918_0" startPos="90.65292573646926" endPos="100.65292573646926" friendlyPos="true"/>
+  <busStop id="1800SB30531" name="1800SB30531" lane="edge203828_0" startPos="95.1468421581172" endPos="105.1468421581172" friendlyPos="true"/>
+  <busStop id="1800EB07841" name="1800EB07841" lane="edge255615_0" startPos="72.78101613114922" endPos="82.78101613114922" friendlyPos="true"/>
+  <busStop id="1800EBH1731" name="1800EBH1731" lane="edge198278_0" startPos="124.71055731879011" endPos="134.7105573187901" friendlyPos="true"/>
+  <busStop id="1800SB34411" name="1800SB34411" lane="edge197057_0" startPos="72.24413567182418" endPos="82.24413567182418" friendlyPos="true"/>
+  <busStop id="1800SB33871" name="1800SB33871" lane="edge253848_0" startPos="34.13523135135959" endPos="44.13523135135959" friendlyPos="true"/>
+  <busStop id="1800SB34371" name="1800SB34371" lane="edge148758_0" startPos="25.09158707264998" endPos="35.09158707264998" friendlyPos="true"/>
+  <busStop id="1800SB34301" name="1800SB34301" lane="edge88081_0" startPos="56.78569988880304" endPos="66.78569988880304" friendlyPos="true"/>
+  <busStop id="1800SB34291" name="1800SB34291" lane="edge189515_0" startPos="24.973892604081506" endPos="34.973892604081506" friendlyPos="true"/>
+  <busStop id="1800SB33861" name="1800SB33861" lane="edge183967_0" startPos="19.411109945534573" endPos="29.411109945534573" friendlyPos="true"/>
+  <busStop id="1800SJ30221" name="1800SJ30221" lane="edge199248_0" startPos="0.0" endPos="10.0" friendlyPos="true"/>
+  <busStop id="1800EB06351" name="1800EB06351" lane="edge182274_0" startPos="70.55071584727398" endPos="80.55071584727398" friendlyPos="true"/>
+  <busStop id="1800SB34311" name="1800SB34311" lane="edge219063_0" startPos="27.918322774889724" endPos="37.918322774889724" friendlyPos="true"/>
+  <busStop id="1800SB31681" name="1800SB31681" lane="edge219253_0" startPos="101.61301006192558" endPos="111.61301006192558" friendlyPos="true"/>
+  <busStop id="1800SB31671" name="1800SB31671" lane="edge219253_0" startPos="131.06239563182783" endPos="141.06239563182783" friendlyPos="true"/>
+  <busStop id="1800SB14181" name="1800SB14181" lane="edge217125_0" startPos="38.22773023310066" endPos="48.22773023310066" friendlyPos="true"/>
+  <busStop id="1800SB14171" name="1800SB14171" lane="edge256505_0" startPos="21.06903346399793" endPos="31.06903346399793" friendlyPos="true"/>
+  <busStop id="1800SB14201" name="1800SB14201" lane="edge148785_0" startPos="55.009332185444215" endPos="65.00933218544421" friendlyPos="true"/>
+  <busStop id="1800SB14031" name="1800SB14031" lane="edge194994_0" startPos="76.99800451414886" endPos="86.99800451414886" friendlyPos="true"/>
+  <busStop id="1800SB14081" name="1800SB14081" lane="edge257234_0" startPos="17.379696173246334" endPos="27.379696173246334" friendlyPos="true"/>
+  <busStop id="1800SB14191" name="1800SB14191" lane="edge256483_0" startPos="114.44949808370868" endPos="124.44949808370868" friendlyPos="true"/>
+  <busStop id="1800EBH1781" name="1800EBH1781" lane="edge160185_0" startPos="117.21756861389818" endPos="127.21756861389818" friendlyPos="true"/>
+  <busStop id="1800SB17051" name="1800SB17051" lane="edge1513_0" startPos="5.447858802338095" endPos="15.447858802338095" friendlyPos="true"/>
+  <busStop id="1800EB10481" name="1800EB10481" lane="edge147937_0" startPos="51.31259997426108" endPos="61.31259997426108" friendlyPos="true"/>
+  <busStop id="1800EB05451" name="1800EB05451" lane="edge147937_0" startPos="88.87286561634606" endPos="98.87286561634606" friendlyPos="true"/>
+  <busStop id="1800EB27541" name="1800EB27541" lane="edge215560_0" startPos="105.81692400340617" endPos="115.81692400340617" friendlyPos="true"/>
+  <busStop id="1800EB27531" name="1800EB27531" lane="edge215560_0" startPos="160.20113874579374" endPos="170.20113874579374" friendlyPos="true"/>
+  <busStop id="1800SB08841" name="1800SB08841" lane="edge247303_0" startPos="12.848199347402058" endPos="22.84819934740206" friendlyPos="true"/>
+  <busStop id="1800EB17731" name="1800EB17731" lane="edge216890_0" startPos="59.82496253970638" endPos="69.82496253970638" friendlyPos="true"/>
+  <busStop id="1800EB08071" name="1800EB08071" lane="edge210822_0" startPos="97.92903468753079" endPos="107.92903468753079" friendlyPos="true"/>
+  <busStop id="1800EB01291" name="1800EB01291" lane="edge210822_0" startPos="59.398164249072025" endPos="69.39816424907202" friendlyPos="true"/>
+  <busStop id="1800EB07781" name="1800EB07781" lane="edge85384_0" startPos="39.312805970802685" endPos="49.312805970802685" friendlyPos="true"/>
+  <busStop id="1800SB31711" name="1800SB31711" lane="edge247555_0" startPos="233.71341593990803" endPos="243.71341593990803" friendlyPos="true"/>
+  <busStop id="1800EB07961" name="1800EB07961" lane="edge255992_0" startPos="21.261230236391487" endPos="31.261230236391487" friendlyPos="true"/>
+  <busStop id="1800SB31751" name="1800SB31751" lane="edge255992_0" startPos="7.460785845955931" endPos="17.460785845955932" friendlyPos="true"/>
+  <busStop id="1800SB31801" name="1800SB31801" lane="edge185574_0" startPos="3.667494426325474" endPos="13.667494426325474" friendlyPos="true"/>
+  <busStop id="1800SB31301" name="1800SB31301" lane="edge203741_0" startPos="82.9086931076483" endPos="92.9086931076483" friendlyPos="true"/>
+  <busStop id="1800SB15051" name="1800SB15051" lane="edge247555_0" startPos="158.1730351741001" endPos="168.1730351741001" friendlyPos="true"/>
+  <busStop id="1800SB31291" name="1800SB31291" lane="edge136626_0" startPos="288.5279042358317" endPos="298.5279042358317" friendlyPos="true"/>
+  <busStop id="1800SB31471" name="1800SB31471" lane="edge186042_0" startPos="41.11877145698245" endPos="51.11877145698245" friendlyPos="true"/>
+  <busStop id="1800SB31481" name="1800SB31481" lane="edge255944_0" startPos="42.5928595816049" endPos="52.5928595816049" friendlyPos="true"/>
+  <busStop id="1800SB31081" name="1800SB31081" lane="edge180920_0" startPos="170.06774003511612" endPos="180.06774003511612" friendlyPos="true"/>
+  <busStop id="1800EB06291" name="1800EB06291" lane="edge245427_0" startPos="101.6531985111234" endPos="111.6531985111234" friendlyPos="true"/>
+  <busStop id="1800EB06171" name="1800EB06171" lane="edge49798_0" startPos="23.726429045735063" endPos="33.72642904573506" friendlyPos="true"/>
+  <busStop id="1800EB06191" name="1800EB06191" lane="edge181697_0" startPos="135.9297961385386" endPos="145.9297961385386" friendlyPos="true"/>
+  <busStop id="1800EB06281" name="1800EB06281" lane="edge245452_0" startPos="134.86391053507978" endPos="144.86391053507978" friendlyPos="true"/>
+  <busStop id="1800EB04631" name="1800EB04631" lane="edge160622_0" startPos="96.3050453012185" endPos="106.3050453012185" friendlyPos="true"/>
+  <busStop id="1800SB31001" name="1800SB31001" lane="edge140591_0" startPos="73.15698639335967" endPos="83.15698639335967" friendlyPos="true"/>
+  <busStop id="1800SB11951" name="1800SB11951" lane="edge185286_0" startPos="82.30072964188292" endPos="92.30072964188292" friendlyPos="true"/>
+  <busStop id="1800SB09561" name="1800SB09561" lane="edge197949_0" startPos="384.93263196053056" endPos="394.93263196053056" friendlyPos="true"/>
+  <busStop id="1800SB11621" name="1800SB11621" lane="edge185286_0" startPos="110.15039426067521" endPos="120.15039426067521" friendlyPos="true"/>
+  <busStop id="1800SB33271" name="1800SB33271" lane="edge1149_0" startPos="18.383442131132664" endPos="28.383442131132664" friendlyPos="true"/>
+  <busStop id="1800SB31011" name="1800SB31011" lane="edge59838_0" startPos="2.777020262415663" endPos="12.777020262415663" friendlyPos="true"/>
+  <busStop id="1800SB31421" name="1800SB31421" lane="edge94063_0" startPos="22.434911221624432" endPos="32.43491122162443" friendlyPos="true"/>
+  <busStop id="1800SB18281" name="1800SB18281" lane="edge207503_0" startPos="126.96108985168175" endPos="136.96108985168175" friendlyPos="true"/>
+  <busStop id="1800SB33191" name="1800SB33191" lane="edge241701_0" startPos="18.7501501196958" endPos="28.7501501196958" friendlyPos="true"/>
+  <busStop id="1800SB16301" name="1800SB16301" lane="edge24893_0" startPos="20.652852804529147" endPos="30.652852804529147" friendlyPos="true"/>
+  <busStop id="1800SB09531" name="1800SB09531" lane="edge59261_0" startPos="76.88538894389492" endPos="86.88538894389492" friendlyPos="true"/>
+  <busStop id="1800SB33451" name="1800SB33451" lane="edge139301_0" startPos="0.0" endPos="10.0" friendlyPos="true"/>
+  <busStop id="1800SB34321" name="1800SB34321" lane="edge256734_0" startPos="7.49800305308278" endPos="17.49800305308278" friendlyPos="true"/>
+  <busStop id="1800EB04621" name="1800EB04621" lane="edge257478_0" startPos="63.30952159253387" endPos="73.30952159253387" friendlyPos="true"/>
+  <busStop id="1800SB31111" name="1800SB31111" lane="edge206320_0" startPos="6.451389214095753" endPos="16.451389214095755" friendlyPos="true"/>
+  <busStop id="1800SB31921" name="1800SB31921" lane="edge203010_0" startPos="60.88126079016972" endPos="70.88126079016972" friendlyPos="true"/>
+  <busStop id="1800SB32911" name="1800SB32911" lane="edge94036_0" startPos="101.44516856071675" endPos="111.44516856071675" friendlyPos="true"/>
+  <busStop id="1800SB32921" name="1800SB32921" lane="edge140671_0" startPos="37.826990281142514" endPos="47.826990281142514" friendlyPos="true"/>
+  <busStop id="1800SB12471" name="1800SB12471" lane="edge204368_0" startPos="1.5502693294558378" endPos="11.550269329455837" friendlyPos="true"/>
+  <busStop id="1800SB18691" name="1800SB18691" lane="edge139867_0" startPos="59.32532393115852" endPos="69.32532393115852" friendlyPos="true"/>
+  <busStop id="1800SB30681" name="1800SB30681" lane="edge139867_0" startPos="35.16332910631675" endPos="45.16332910631675" friendlyPos="true"/>
+  <busStop id="1800SB12481" name="1800SB12481" lane="edge170471_0" startPos="19.012487456587998" endPos="29.012487456587998" friendlyPos="true"/>
+  <busStop id="1800EBT0281" name="1800EBT0281" lane="edge66347_0" startPos="8.859479820382848" endPos="18.859479820382848" friendlyPos="true"/>
+  <busStop id="1800EBT0561" name="1800EBT0561" lane="edge255917_0" startPos="103.06912464556704" endPos="113.06912464556704" friendlyPos="true"/>
+  <busStop id="1800EB07761" name="1800EB07761" lane="edge255907_0" startPos="10.686186473141607" endPos="20.686186473141607" friendlyPos="true"/>
+  <busStop id="1800EBT0301" name="1800EBT0301" lane="edge173162_0" startPos="17.42852969552116" endPos="27.42852969552116" friendlyPos="true"/>
+  <busStop id="1800SB33031" name="1800SB33031" lane="edge256147_0" startPos="23.481981031476334" endPos="33.48198103147634" friendlyPos="true"/>
+  <busStop id="1800EB10501" name="1800EB10501" lane="edge217376_0" startPos="0.0" endPos="10.0" friendlyPos="true"/>
+  <busStop id="1800EB03821" name="1800EB03821" lane="edge218202_0" startPos="0.0" endPos="10.0" friendlyPos="true"/>
+  <busStop id="1800EB03831" name="1800EB03831" lane="edge62522_0" startPos="8.42117119408053" endPos="18.42117119408053" friendlyPos="true"/>
+  <busStop id="1800SB14231" name="1800SB14231" lane="edge194989_0" startPos="38.21492519428618" endPos="48.21492519428618" friendlyPos="true"/>
+  <busStop id="1800SB31581" name="1800SB31581" lane="edge219778_0" startPos="54.905519259977766" endPos="64.90551925997777" friendlyPos="true"/>
+  <busStop id="1800SB31591" name="1800SB31591" lane="edge219778_0" startPos="203.5320863487403" endPos="213.5320863487403" friendlyPos="true"/>
+  <busStop id="1800SB31861" name="1800SB31861" lane="edge245974_0" startPos="49.68290129542372" endPos="59.68290129542372" friendlyPos="true"/>
+  <busStop id="1800SB31871" name="1800SB31871" lane="edge65620_0" startPos="19.66661535265407" endPos="29.66661535265407" friendlyPos="true"/>
+  <busStop id="1800SB30131" name="1800SB30131" lane="edge186778_0" startPos="6.488453364886812" endPos="16.488453364886812" friendlyPos="true"/>
+  <busStop id="1800SJ32041" name="1800SJ32041" lane="edge252143_0" startPos="10.487418470633267" endPos="20.487418470633266" friendlyPos="true"/>
+  <busStop id="1800SJ32551" name="1800SJ32551" lane="edge255502_0" startPos="45.05661187975569" endPos="55.05661187975569" friendlyPos="true"/>
+  <busStop id="1800EB04161" name="1800EB04161" lane="edge255834_0" startPos="84.83966507057112" endPos="94.83966507057112" friendlyPos="true"/>
+  <busStop id="1800EB04171" name="1800EB04171" lane="edge255834_0" startPos="166.38842862438042" endPos="176.38842862438042" friendlyPos="true"/>
+  <busStop id="1800EB10491" name="1800EB10491" lane="edge215569_0" startPos="33.098356064926065" endPos="43.098356064926065" friendlyPos="true"/>
+  <busStop id="1800SJ15101" name="1800SJ15101" lane="edge222819_0" startPos="93.33454358119819" endPos="103.33454358119819" friendlyPos="true"/>
+  <busStop id="1800EB04471" name="1800EB04471" lane="edge153313_0" startPos="8.574160714058518" endPos="18.574160714058518" friendlyPos="true"/>
+  <busStop id="1800EB03771" name="1800EB03771" lane="edge218175_0" startPos="13.343938046719288" endPos="23.343938046719288" friendlyPos="true"/>
+  <busStop id="1800EB04461" name="1800EB04461" lane="edge218288_0" startPos="40.496178457666716" endPos="50.496178457666716" friendlyPos="true"/>
+  <busStop id="1800EB17721" name="1800EB17721" lane="edge64742_0" startPos="107.95716762986673" endPos="117.95716762986673" friendlyPos="true"/>
+  <busStop id="1800SB33781" name="1800SB33781" lane="edge5475_0" startPos="8.092864024137192" endPos="18.092864024137192" friendlyPos="true"/>
+  <busStop id="1800SBE0911" name="1800SBE0911" lane="edge1335_0" startPos="17.02970868452558" endPos="27.02970868452558" friendlyPos="true"/>
+  <busStop id="1800SBE0931" name="1800SBE0931" lane="edge60820_0" startPos="15.951175420057883" endPos="25.951175420057883" friendlyPos="true"/>
+  <busStop id="1800SB33541" name="1800SB33541" lane="edge60820_0" startPos="37.05636940279354" endPos="47.05636940279354" friendlyPos="true"/>
+  <busStop id="1800SB33551" name="1800SB33551" lane="edge148783_0" startPos="30.150489270899094" endPos="40.150489270899094" friendlyPos="true"/>
+  <busStop id="1800SBE0921" name="1800SBE0921" lane="edge148774_0" startPos="4.615558459248177" endPos="14.615558459248177" friendlyPos="true"/>
+  <busStop id="1800SB31031" name="1800SB31031" lane="edge107353_0" startPos="38.301709437392915" endPos="48.301709437392915" friendlyPos="true"/>
+  <busStop id="1800SB31021" name="1800SB31021" lane="edge219260_0" startPos="23.281388991079574" endPos="33.281388991079574" friendlyPos="true"/>
+  <busStop id="1800SB30391" name="1800SB30391" lane="edge198299_0" startPos="18.472494588541124" endPos="28.472494588541124" friendlyPos="true"/>
+  <busStop id="1800EB00861" name="1800EB00861" lane="edge218154_0" startPos="118.03407047948559" endPos="128.0340704794856" friendlyPos="true"/>
+  <busStop id="1800EB06101" name="1800EB06101" lane="edge218154_0" startPos="115.48868105002205" endPos="125.48868105002205" friendlyPos="true"/>
+  <busStop id="1800SB33501" name="1800SB33501" lane="edge88075_0" startPos="262.63366386363697" endPos="272.63366386363697" friendlyPos="true"/>
+  <busStop id="1800SBT0461" name="1800SBT0461" lane="edge1240_0" startPos="40.40236469898905" endPos="50.40236469898905" friendlyPos="true"/>
+  <busStop id="1800SB31931" name="1800SB31931" lane="edge206489_0" startPos="16.94372744449321" endPos="26.94372744449321" friendlyPos="true"/>
+  <busStop id="1800EB03941" name="1800EB03941" lane="edge196999_0" startPos="18.37421945614252" endPos="28.37421945614252" friendlyPos="true"/>
+  <busStop id="1800SJ32011" name="1800SJ32011" lane="edge222830_0" startPos="46.66537196454705" endPos="56.66537196454705" friendlyPos="true"/>
+  <busStop id="1800SJ32001" name="1800SJ32001" lane="edge222830_0" startPos="43.557990953414304" endPos="53.557990953414304" friendlyPos="true"/>
+  <busStop id="1800SB14881" name="1800SB14881" lane="edge213452_0" startPos="45.81126985323025" endPos="55.81126985323025" friendlyPos="true"/>
+  <busStop id="1800SB32511" name="1800SB32511" lane="edge256664_0" startPos="79.35221804052" endPos="89.35221804052" friendlyPos="true"/>
+  <busStop id="1800SB32501" name="1800SB32501" lane="edge256134_0" startPos="23.75608943503993" endPos="33.756089435039925" friendlyPos="true"/>
+  <busStop id="1800SB02571" name="1800SB02571" lane="edge2529_0" startPos="160.68759663823232" endPos="170.68759663823232" friendlyPos="true"/>
+  <busStop id="1800SB12041" name="1800SB12041" lane="edge1101_0" startPos="19.485648262640662" endPos="29.485648262640662" friendlyPos="true"/>
+  <busStop id="1800SB02581" name="1800SB02581" lane="edge2529_0" startPos="434.73901545348394" endPos="444.73901545348394" friendlyPos="true"/>
+  <busStop id="1800SB33091" name="1800SB33091" lane="edge210849_0" startPos="22.001078618592636" endPos="32.001078618592636" friendlyPos="true"/>
+  <busStop id="1800SB14381" name="1800SB14381" lane="edge2695_0" startPos="46.61833962379836" endPos="56.61833962379836" friendlyPos="true"/>
+  <busStop id="1800EB05551" name="1800EB05551" lane="edge131276_0" startPos="45.47563569606063" endPos="55.47563569606063" friendlyPos="true"/>
+  <busStop id="1800EB27521" name="1800EB27521" lane="edge208098_0" startPos="4.781514128398504" endPos="14.781514128398504" friendlyPos="true"/>
+  <busStop id="1800EB27511" name="1800EB27511" lane="edge64341_0" startPos="48.53971755180248" endPos="58.53971755180248" friendlyPos="true"/>
+  <busStop id="1800EBH1711" name="1800EBH1711" lane="edge10387_0" startPos="0.0" endPos="10.0" friendlyPos="true"/>
+  <busStop id="1800EB17691" name="1800EB17691" lane="edge204553_0" startPos="59.50657417089846" endPos="69.50657417089846" friendlyPos="true"/>
+  <busStop id="1800EB06121" name="1800EB06121" lane="edge62025_0" startPos="12.147295696070177" endPos="22.147295696070177" friendlyPos="true"/>
+  <busStop id="1800EB10521" name="1800EB10521" lane="edge62475_0" startPos="243.0959359392544" endPos="253.0959359392544" friendlyPos="true"/>
+  <busStop id="1800EB10531" name="1800EB10531" lane="edge62475_0" startPos="214.73300547710548" endPos="224.73300547710548" friendlyPos="true"/>
+  <busStop id="1800SB30431" name="1800SB30431" lane="edge3525_0" startPos="53.52799377768904" endPos="63.52799377768904" friendlyPos="true"/>
+  <busStop id="1800SB30421" name="1800SB30421" lane="edge32047_0" startPos="68.45810296909002" endPos="78.45810296909002" friendlyPos="true"/>
+  <busStop id="1800EB01911" name="1800EB01911" lane="edge256552_0" startPos="16.33226067257787" endPos="26.33226067257787" friendlyPos="true"/>
+  <busStop id="1800SB13961" name="1800SB13961" lane="edge192912_0" startPos="14.184792560064885" endPos="24.184792560064885" friendlyPos="true"/>
+  <busStop id="1800SB30071" name="1800SB30071" lane="edge180807_0" startPos="39.52792629952063" endPos="49.52792629952063" friendlyPos="true"/>
+  <busStop id="1800SJ30081" name="1800SJ30081" lane="edge189250_0" startPos="19.542929096176934" endPos="29.542929096176934" friendlyPos="true"/>
+  <busStop id="1800EB01621" name="1800EB01621" lane="edge218132_0" startPos="37.181411597788816" endPos="47.181411597788816" friendlyPos="true"/>
+  <busStop id="1800EB01961" name="1800EB01961" lane="edge215582_0" startPos="0.0" endPos="10.0" friendlyPos="true"/>
+  <busStop id="1800SB17501" name="1800SB17501" lane="edge155632_0" startPos="56.87416149254193" endPos="66.87416149254193" friendlyPos="true"/>
+  <busStop id="1800SB18671" name="1800SB18671" lane="edge215211_0" startPos="56.73477895214563" endPos="66.73477895214563" friendlyPos="true"/>
+  <busStop id="1800SB34011" name="1800SB34011" lane="edge154303_0" startPos="3.7411184732242617" endPos="13.741118473224262" friendlyPos="true"/>
+  <busStop id="1800SB34391" name="1800SB34391" lane="edge197890_0" startPos="32.25821494003398" endPos="42.25821494003398" friendlyPos="true"/>
+  <busStop id="1800SB34401" name="1800SB34401" lane="edge177103_0" startPos="0.0" endPos="10.0" friendlyPos="true"/>
+  <busStop id="1800SB34021" name="1800SB34021" lane="edge88741_0" startPos="48.372725422258796" endPos="58.372725422258796" friendlyPos="true"/>
+  <busStop id="1800SB31531" name="1800SB31531" lane="edge180696_0" startPos="13.991673120413669" endPos="23.99167312041367" friendlyPos="true"/>
+  <busStop id="1800EB00021" name="1800EB00021" lane="edge217380_0" startPos="0.0" endPos="10.0" friendlyPos="true"/>
+  <busStop id="1800SB33731" name="1800SB33731" lane="edge68738_0" startPos="22.51297638303639" endPos="32.51297638303639" friendlyPos="true"/>
+  <busStop id="1800SB33721" name="1800SB33721" lane="edge213849_0" startPos="28.47840628399564" endPos="38.47840628399564" friendlyPos="true"/>
+  <busStop id="1800SG40311" name="1800SG40311" lane="edge250013_0" startPos="29.045424419647127" endPos="39.04542441964713" friendlyPos="true"/>
+  <busStop id="1800SGH2231" name="1800SGH2231" lane="edge250014_0" startPos="61.006383224992774" endPos="71.00638322499277" friendlyPos="true"/>
+  <busStop id="1800SB31841" name="1800SB31841" lane="edge255993_0" startPos="136.06062639881247" endPos="146.06062639881247" friendlyPos="true"/>
+  <busStop id="1800SG40371" name="1800SG40371" lane="edge208904_0" startPos="21.005753361591474" endPos="31.005753361591474" friendlyPos="true"/>
+  <busStop id="1800SG12531" name="1800SG12531" lane="edge186138_0" startPos="19.11279256229" endPos="29.11279256229" friendlyPos="true"/>
+  <busStop id="1800SJ30241" name="1800SJ30241" lane="edge229373_0" startPos="1.498482493121994" endPos="11.498482493121994" friendlyPos="true"/>
+  <busStop id="1800SJ32051" name="1800SJ32051" lane="edge209502_0" startPos="18.12673072612457" endPos="28.12673072612457" friendlyPos="true"/>
+  <busStop id="1800SJ30211" name="1800SJ30211" lane="edge252190_0" startPos="35.65942635066827" endPos="45.65942635066827" friendlyPos="true"/>
+  <busStop id="1800SJ00211" name="1800SJ00211" lane="edge199498_0" startPos="46.86884370431736" endPos="56.86884370431736" friendlyPos="true"/>
+  <busStop id="1800SJ00311" name="1800SJ00311" lane="edge76178_0" startPos="25.805212052229567" endPos="35.805212052229564" friendlyPos="true"/>
+  <busStop id="1800SJ32061" name="1800SJ32061" lane="edge207908_0" startPos="31.20058157983601" endPos="41.20058157983601" friendlyPos="true"/>
+  <busStop id="1800SJ00301" name="1800SJ00301" lane="edge209501_0" startPos="0.0" endPos="10.0" friendlyPos="true"/>
+  <busStop id="1800SJ00221" name="1800SJ00221" lane="edge199498_0" startPos="73.35070940335615" endPos="83.35070940335615" friendlyPos="true"/>
+  <busStop id="1800SJ30231" name="1800SJ30231" lane="edge252149_0" startPos="7.650055195054229" endPos="17.65005519505423" friendlyPos="true"/>
+  <busStop id="1800SB09511" name="1800SB09511" lane="edge255854_0" startPos="2.622845521356161" endPos="12.622845521356162" friendlyPos="true"/>
+  <busStop id="1800SB13971" name="1800SB13971" lane="edge140823_0" startPos="1.3847749139124863" endPos="11.384774913912487" friendlyPos="true"/>
+  <busStop id="1800EB01901" name="1800EB01901" lane="edge69382_0" startPos="29.603671157998214" endPos="39.603671157998214" friendlyPos="true"/>
+  <busStop id="1800SJ30051" name="1800SJ30051" lane="edge222821_0" startPos="0.0" endPos="10.0" friendlyPos="true"/>
+  <busStop id="1800SJ30061" name="1800SJ30061" lane="edge252122_0" startPos="34.46714842505797" endPos="44.46714842505797" friendlyPos="true"/>
+  <busStop id="1800EB01941" name="1800EB01941" lane="edge27_0" startPos="14.753176409443203" endPos="24.753176409443203" friendlyPos="true"/>
+  <busStop id="1800SB33361" name="1800SB33361" lane="edge256491_0" startPos="109.27587697415834" endPos="119.27587697415834" friendlyPos="true"/>
+  <busStop id="1800SB16451" name="1800SB16451" lane="edge165255_0" startPos="44.50182584277066" endPos="54.50182584277066" friendlyPos="true"/>
+  <busStop id="1800SB33351" name="1800SB33351" lane="edge256491_0" startPos="85.0258166617927" endPos="95.0258166617927" friendlyPos="true"/>
+  <busStop id="1800SBH5011" name="1800SBH5011" lane="edge177558_0" startPos="11.182387612356557" endPos="21.182387612356557" friendlyPos="true"/>
+  <busStop id="1800SBH0211" name="1800SBH0211" lane="edge257394_0" startPos="20.56051348841444" endPos="30.56051348841444" friendlyPos="true"/>
+  <busStop id="1800EB07881" name="1800EB07881" lane="edge180525_0" startPos="72.32781491012375" endPos="82.32781491012375" friendlyPos="true"/>
+  <busStop id="1800SB31941" name="1800SB31941" lane="edge206488_0" startPos="0.0" endPos="10.0" friendlyPos="true"/>
+  <busStop id="1800EB07891" name="1800EB07891" lane="edge180525_0" startPos="0.0" endPos="10.0" friendlyPos="true"/>
+  <busStop id="1800SG14311" name="1800SG14311" lane="edge240846_0" startPos="146.08564554201635" endPos="156.08564554201635" friendlyPos="true"/>
+  <busStop id="1800SG08691" name="1800SG08691" lane="edge219697_0" startPos="19.687879510019588" endPos="29.687879510019588" friendlyPos="true"/>
+  <busStop id="1800SB34331" name="1800SB34331" lane="edge197906_0" startPos="7.142958216079837" endPos="17.142958216079837" friendlyPos="true"/>
+  <busStop id="1800SB34341" name="1800SB34341" lane="edge197906_0" startPos="1.6820474987546072" endPos="11.682047498754606" friendlyPos="true"/>
+  <busStop id="1800SBH1531" name="1800SBH1531" lane="edge81008_0" startPos="39.84289855927466" endPos="49.84289855927466" friendlyPos="true"/>
+  <busStop id="1800EB06081" name="1800EB06081" lane="edge93170_0" startPos="53.02412608709228" endPos="63.02412608709228" friendlyPos="true"/>
+  <busStop id="1800EB04191" name="1800EB04191" lane="edge255834_0" startPos="427.91638736245125" endPos="437.91638736245125" friendlyPos="true"/>
+  <busStop id="1800EB04181" name="1800EB04181" lane="edge255834_0" startPos="396.54094858738677" endPos="406.54094858738677" friendlyPos="true"/>
+  <busStop id="1800SB31431" name="1800SB31431" lane="edge255869_0" startPos="155.260400355435" endPos="165.260400355435" friendlyPos="true"/>
+  <busStop id="1800SB14641" name="1800SB14641" lane="edge94957_0" startPos="0.0" endPos="10.0" friendlyPos="true"/>
+  <busStop id="1800SB14491" name="1800SB14491" lane="edge94957_0" startPos="16.45855345372319" endPos="26.45855345372319" friendlyPos="true"/>
+  <busStop id="1800SB33651" name="1800SB33651" lane="edge256695_0" startPos="55.742341976157086" endPos="65.74234197615709" friendlyPos="true"/>
+  <busStop id="1800SB33231" name="1800SB33231" lane="edge256661_0" startPos="49.07471871907471" endPos="59.07471871907471" friendlyPos="true"/>
+  <busStop id="1800SB33241" name="1800SB33241" lane="edge256663_0" startPos="223.43566318957073" endPos="233.43566318957073" friendlyPos="true"/>
+  <busStop id="1800SB09861" name="1800SB09861" lane="edge256695_0" startPos="37.81550953402077" endPos="47.81550953402077" friendlyPos="true"/>
+  <busStop id="1800SB33371" name="1800SB33371" lane="edge256506_0" startPos="19.081801407278697" endPos="29.081801407278697" friendlyPos="true"/>
+  <busStop id="1800EB11291" name="1800EB11291" lane="edge63988_0" startPos="61.61335721392135" endPos="71.61335721392135" friendlyPos="true"/>
+  <busStop id="1800SB14891" name="1800SB14891" lane="edge253800_0" startPos="17.311956303930128" endPos="27.311956303930128" friendlyPos="true"/>
+  <busStop id="1800SB31491" name="1800SB31491" lane="edge255943_0" startPos="38.740482109104924" endPos="48.740482109104924" friendlyPos="true"/>
+  <busStop id="1800SB31501" name="1800SB31501" lane="edge255943_0" startPos="47.87165573520824" endPos="57.87165573520824" friendlyPos="true"/>
+  <busStop id="1800SB31721" name="1800SB31721" lane="edge93833_0" startPos="110.58024215854303" endPos="120.58024215854303" friendlyPos="true"/>
+  <busStop id="1800EB07941" name="1800EB07941" lane="edge1223_0" startPos="33.7195143988942" endPos="43.7195143988942" friendlyPos="true"/>
+  <busStop id="1800EB11361" name="1800EB11361" lane="edge1223_0" startPos="59.757195455061634" endPos="69.75719545506163" friendlyPos="true"/>
+  <busStop id="1800SB32681" name="1800SB32681" lane="edge91612_0" startPos="1.2598258394591522" endPos="11.259825839459152" friendlyPos="true"/>
+  <busStop id="1800SB31991" name="1800SB31991" lane="edge80915_0" startPos="45.92552260452521" endPos="55.92552260452521" friendlyPos="true"/>
+  <busStop id="1800SB12031" name="1800SB12031" lane="edge185813_0" startPos="5.760800152586352" endPos="15.760800152586352" friendlyPos="true"/>
+  <busStop id="1800SB33001" name="1800SB33001" lane="edge24898_0" startPos="17.12477099225201" endPos="27.12477099225201" friendlyPos="true"/>
+  <busStop id="1800SB33011" name="1800SB33011" lane="edge136628_0" startPos="89.7983048013451" endPos="99.7983048013451" friendlyPos="true"/>
+  <busStop id="1800SB31061" name="1800SB31061" lane="edge180920_0" startPos="245.89012859161733" endPos="255.89012859161733" friendlyPos="true"/>
+  <busStop id="1800SB45171" name="1800SB45171" lane="edge159499_0" startPos="29.07019695464932" endPos="39.07019695464932" friendlyPos="true"/>
+  <busStop id="1800SB32441" name="1800SB32441" lane="edge198980_0" startPos="48.8897536450282" endPos="58.8897536450282" friendlyPos="true"/>
+  <busStop id="1800SBH5021" name="1800SBH5021" lane="edge219258_0" startPos="0.0" endPos="10.0" friendlyPos="true"/>
+  <busStop id="1800SB14221" name="1800SB14221" lane="edge253701_0" startPos="31.189890692927627" endPos="41.18989069292763" friendlyPos="true"/>
+  <busStop id="1800SB14211" name="1800SB14211" lane="edge253700_0" startPos="23.371502459479252" endPos="33.37150245947925" friendlyPos="true"/>
+  <busStop id="1800EB07741" name="1800EB07741" lane="edge63693_0" startPos="3.5103264172768007" endPos="13.5103264172768" friendlyPos="true"/>
+  <busStop id="1800SB34351" name="1800SB34351" lane="edge192952_0" startPos="70.00016213440271" endPos="80.00016213440271" friendlyPos="true"/>
+  <busStop id="1800SB33611" name="1800SB33611" lane="edge217228_0" startPos="31.05330975665651" endPos="41.05330975665651" friendlyPos="true"/>
+  <busStop id="1800EB04331" name="1800EB04331" lane="edge5773_0" startPos="47.85950036577626" endPos="57.85950036577626" friendlyPos="true"/>
+  <busStop id="1800EB04351" name="1800EB04351" lane="edge62386_0" startPos="22.897687729091388" endPos="32.89768772909139" friendlyPos="true"/>
+  <busStop id="1800SB31511" name="1800SB31511" lane="edge250414_0" startPos="40.1059631035543" endPos="50.1059631035543" friendlyPos="true"/>
+  <busStop id="1800EB04341" name="1800EB04341" lane="edge62386_0" startPos="61.02684343680751" endPos="71.02684343680751" friendlyPos="true"/>
+  <busStop id="1800EB07771" name="1800EB07771" lane="edge79513_0" startPos="26.236869691765214" endPos="36.236869691765214" friendlyPos="true"/>
+  <busStop id="1800EB07871" name="1800EB07871" lane="edge208496_0" startPos="2.790953620652978" endPos="12.790953620652978" friendlyPos="true"/>
+  <busStop id="1800SB14111" name="1800SB14111" lane="edge256486_0" startPos="17.001765098677634" endPos="27.001765098677634" friendlyPos="true"/>
+  <busStop id="1800EB07861" name="1800EB07861" lane="edge208496_0" startPos="46.78195691702218" endPos="56.78195691702218" friendlyPos="true"/>
+  <busStop id="1800SB34431" name="1800SB34431" lane="edge88744_0" startPos="0.0" endPos="10.0" friendlyPos="true"/>
+  <busStop id="1800EB08101" name="1800EB08101" lane="edge250410_0" startPos="53.63708226709067" endPos="63.63708226709067" friendlyPos="true"/>
+  <busStop id="1800SB33801" name="1800SB33801" lane="edge24896_0" startPos="14.436906950638825" endPos="24.436906950638825" friendlyPos="true"/>
+  <busStop id="1800SB33791" name="1800SB33791" lane="edge140585_0" startPos="28.568970702768283" endPos="38.56897070276828" friendlyPos="true"/>
+  <busStop id="1800EB06201" name="1800EB06201" lane="edge245936_0" startPos="74.89270505372819" endPos="84.89270505372819" friendlyPos="true"/>
+  <busStop id="1800EB06271" name="1800EB06271" lane="edge181697_0" startPos="7.8847716345967385" endPos="17.88477163459674" friendlyPos="true"/>
+  <busStop id="1800EB01861" name="1800EB01861" lane="edge245937_0" startPos="113.11290937632113" endPos="123.11290937632113" friendlyPos="true"/>
+  <busStop id="1800EB01791" name="1800EB01791" lane="edge245937_0" startPos="36.71988076887409" endPos="46.71988076887409" friendlyPos="true"/>
+  <busStop id="1800SB33171" name="1800SB33171" lane="edge148806_0" startPos="0.0" endPos="10.0" friendlyPos="true"/>
+  <busStop id="1800ZAMAWIT1" name="1800ZAMAWIT1" lane="edge241703_0" startPos="224.07316304358" endPos="234.07316304358" friendlyPos="true"/>
+  <busStop id="1800ZZMAWIT2" name="1800ZZMAWIT2" lane="edge103741_0" startPos="4.309326176720408" endPos="14.309326176720408" friendlyPos="true"/>
+  <busStop id="1800SBT0291" name="1800SBT0291" lane="edge206090_0" startPos="101.53062892614733" endPos="111.53062892614733" friendlyPos="true"/>
+  <busStop id="1800SB33751" name="1800SB33751" lane="edge256603_0" startPos="34.37649802249778" endPos="44.37649802249778" friendlyPos="true"/>
+  <busStop id="1800SB33741" name="1800SB33741" lane="edge256604_0" startPos="5.145621647003042" endPos="15.145621647003042" friendlyPos="true"/>
+  <busStop id="1800SBH1421" name="1800SBH1421" lane="edge256908_0" startPos="138.7784892943388" endPos="148.7784892943388" friendlyPos="true"/>
+  <busStop id="1800SBH0601" name="1800SBH0601" lane="edge1425_0" startPos="5.008194364704991" endPos="15.008194364704991" friendlyPos="true"/>
+  <busStop id="1800SB33621" name="1800SB33621" lane="edge256840_0" startPos="17.780909632650104" endPos="27.780909632650104" friendlyPos="true"/>
+  <busStop id="1800SB33201" name="1800SB33201" lane="edge241703_0" startPos="186.0331203482069" endPos="196.0331203482069" friendlyPos="true"/>
+  <busStop id="1800SB33221" name="1800SB33221" lane="edge256612_0" startPos="21.502081105908278" endPos="31.502081105908278" friendlyPos="true"/>
+  <busStop id="1800SB31891" name="1800SB31891" lane="edge219783_0" startPos="20.151981639345436" endPos="30.151981639345436" friendlyPos="true"/>
+  <busStop id="1800SB32931" name="1800SB32931" lane="edge103743_0" startPos="148.97991523063644" endPos="158.97991523063644" friendlyPos="true"/>
+  <busStop id="1800SB32941" name="1800SB32941" lane="edge256561_0" startPos="32.83846046373549" endPos="42.83846046373549" friendlyPos="true"/>
+  <busStop id="1800SB32541" name="1800SB32541" lane="edge256498_0" startPos="267.5710642024648" endPos="277.5710642024648" friendlyPos="true"/>
+  <busStop id="1800SB31071" name="1800SB31071" lane="edge88065_0" startPos="51.39364520733045" endPos="61.39364520733045" friendlyPos="true"/>
+  <busStop id="1800SB33991" name="1800SB33991" lane="edge147019_0" startPos="67.82010566574358" endPos="77.82010566574358" friendlyPos="true"/>
+  <busStop id="1800SB34001" name="1800SB34001" lane="edge147019_0" startPos="28.882213294879904" endPos="38.882213294879904" friendlyPos="true"/>
+  <busStop id="1800SB30101" name="1800SB30101" lane="edge169456_0" startPos="3.514547661407322" endPos="13.514547661407322" friendlyPos="true"/>
+  <busStop id="1800SJ30091" name="1800SJ30091" lane="edge169456_0" startPos="56.05127558789844" endPos="66.05127558789843" friendlyPos="true"/>
+  <busStop id="1800SJ32021" name="1800SJ32021" lane="edge254372_0" startPos="39.955761476824" endPos="49.955761476824" friendlyPos="true"/>
+  <busStop id="1800SJ32031" name="1800SJ32031" lane="edge252139_0" startPos="30.306062107144356" endPos="40.306062107144356" friendlyPos="true"/>
+  <busStop id="1800EB03571" name="1800EB03571" lane="edge218088_0" startPos="57.99304156762708" endPos="67.99304156762707" friendlyPos="true"/>
+  <busStop id="1800SB16551" name="1800SB16551" lane="edge256519_0" startPos="80.10828182041524" endPos="90.10828182041524" friendlyPos="true"/>
+  <busStop id="1800SB16581" name="1800SB16581" lane="edge256519_0" startPos="98.17914641562727" endPos="108.17914641562727" friendlyPos="true"/>
+  <busStop id="1800SJ32561" name="1800SJ32561" lane="edge255491_0" startPos="2.0294334862252974" endPos="12.029433486225297" friendlyPos="true"/>
+  <busStop id="1800SB32521" name="1800SB32521" lane="edge256176_0" startPos="66.35052470639836" endPos="76.35052470639836" friendlyPos="true"/>
+  <busStop id="1800SB32531" name="1800SB32531" lane="edge256498_0" startPos="8.740641432906697" endPos="18.7406414329067" friendlyPos="true"/>
+  <busStop id="1800SB14501" name="1800SB14501" lane="edge206328_0" startPos="22.83297197129775" endPos="32.83297197129775" friendlyPos="true"/>
+  <busStop id="1800SB33321" name="1800SB33321" lane="edge256630_0" startPos="81.43647747449958" endPos="91.43647747449958" friendlyPos="true"/>
+  <busStop id="1800EB07931" name="1800EB07931" lane="edge250416_0" startPos="0.0" endPos="10.0" friendlyPos="true"/>
+  <busStop id="1800SB31791" name="1800SB31791" lane="edge255986_0" startPos="65.45942376338684" endPos="75.45942376338684" friendlyPos="true"/>
+  <busStop id="1800SB33331" name="1800SB33331" lane="edge256630_0" startPos="94.98123440866411" endPos="104.98123440866411" friendlyPos="true"/>
+  <busStop id="1800EB07921" name="1800EB07921" lane="edge140759_0" startPos="58.1361256135811" endPos="68.1361256135811" friendlyPos="true"/>
+  <busStop id="1800EB03851" name="1800EB03851" lane="edge109009_0" startPos="3.975681594655203" endPos="13.975681594655203" friendlyPos="true"/>
+  <trip id="101__I_1_" type="BUS" depart="0.0" from="edge88075" to="edge256612">
+    <stop busStop="1800SB33501" duration="20.0"/>
+    <stop busStop="1800SB33231" duration="20.0"/>
+    <stop busStop="1800SB33241" duration="20.0"/>
+    <stop busStop="1800SB33001" duration="20.0"/>
+    <stop busStop="1800SB33011" duration="20.0"/>
+    <stop busStop="1800ZAMAWIT1" duration="20.0"/>
+    <stop busStop="1800ZZMAWIT2" duration="20.0"/>
+    <stop busStop="1800SB33201" duration="20.0"/>
+    <stop busStop="1800SB33221" duration="20.0"/>
+  </trip>
+  <trip id="102__I_4_" type="BUS" depart="0.0" from="edge256021" to="edge197949">
+    <stop busStop="1800SB31361" duration="20.0"/>
+    <stop busStop="1800SB31351" duration="20.0"/>
+    <stop busStop="1800SB31311" duration="20.0"/>
+    <stop busStop="1800SB31321" duration="20.0"/>
+    <stop busStop="1800SB31381" duration="20.0"/>
+    <stop busStop="1800SB31371" duration="20.0"/>
+    <stop busStop="1800SB33261" duration="20.0"/>
+    <stop busStop="1800SB33251" duration="20.0"/>
+    <stop busStop="1800SB33211" duration="20.0"/>
+    <stop busStop="1800SB31281" duration="20.0"/>
+    <stop busStop="1800SB31391" duration="20.0"/>
+    <stop busStop="1800SB33181" duration="20.0"/>
+    <stop busStop="1800SB33581" duration="20.0"/>
+    <stop busStop="1800SB31301" duration="20.0"/>
+    <stop busStop="1800SB31291" duration="20.0"/>
+    <stop busStop="1800SB09561" duration="20.0"/>
+  </trip>
+  <trip id="103_N_O_1_" type="BUS" depart="0.0" from="edge88075" to="edge256612">
+    <stop busStop="1800SB33501" duration="20.0"/>
+    <stop busStop="1800SB33231" duration="20.0"/>
+    <stop busStop="1800SB33241" duration="20.0"/>
+    <stop busStop="1800SB33001" duration="20.0"/>
+    <stop busStop="1800SB33011" duration="20.0"/>
+    <stop busStop="1800ZAMAWIT1" duration="20.0"/>
+    <stop busStop="1800ZZMAWIT2" duration="20.0"/>
+    <stop busStop="1800SB33201" duration="20.0"/>
+    <stop busStop="1800SB33221" duration="20.0"/>
+  </trip>
+  <trip id="111_A_I_1_" type="BUS" depart="0.0" from="edge255644" to="edge192423">
+    <stop busStop="1800SB34461" duration="20.0"/>
+    <stop busStop="1800SB33691" duration="20.0"/>
+    <stop busStop="1800SB33661" duration="20.0"/>
+    <stop busStop="1800SB33671" duration="20.0"/>
+    <stop busStop="1800SB33681" duration="20.0"/>
+    <stop busStop="1800SB31631" duration="20.0"/>
+  </trip>
+  <trip id="142_N_I_1_" type="BUS" depart="0.0" from="edge253606" to="edge216100">
+    <stop busStop="1800SB12381" duration="20.0"/>
+    <stop busStop="1800SB34141" duration="20.0"/>
+  </trip>
+  <trip id="15_B_I_1_" type="BUS" depart="0.0" from="edge222830" to="edge255943">
+    <stop busStop="1800SJ32001" duration="20.0"/>
+    <stop busStop="1800SJ30051" duration="20.0"/>
+    <stop busStop="1800SJ30061" duration="20.0"/>
+    <stop busStop="1800SB31431" duration="20.0"/>
+    <stop busStop="1800SB31491" duration="20.0"/>
+  </trip>
+  <trip id="150_B_I_1_" type="BUS" depart="0.0" from="edge140849" to="edge218068">
+    <stop busStop="1800EB06141" duration="20.0"/>
+    <stop busStop="1800EB06301" duration="20.0"/>
+    <stop busStop="1800EB06311" duration="20.0"/>
+    <stop busStop="1800EB10561" duration="20.0"/>
+    <stop busStop="1800EB10551" duration="20.0"/>
+  </trip>
+  <trip id="172_B_I_1_" type="BUS" depart="0.0" from="edge24896" to="edge256604">
+    <stop busStop="1800SB33801" duration="20.0"/>
+    <stop busStop="1800SB33791" duration="20.0"/>
+    <stop busStop="1800SB33751" duration="20.0"/>
+    <stop busStop="1800SB33741" duration="20.0"/>
+  </trip>
+  <trip id="197__I_1_" type="BUS" depart="0.0" from="edge245343" to="edge179750">
+    <stop busStop="1800EB01781" duration="20.0"/>
+    <stop busStop="1800EB01871" duration="20.0"/>
+    <stop busStop="1800EB06141" duration="20.0"/>
+    <stop busStop="1800EB06301" duration="20.0"/>
+    <stop busStop="1800EB06311" duration="20.0"/>
+    <stop busStop="1800EB03551" duration="20.0"/>
+  </trip>
+  <trip id="23_C_I_1_" type="BUS" depart="0.0" from="edge1906" to="edge256917">
+    <stop busStop="1800SBT0131" duration="20.0"/>
+    <stop busStop="1800SB32761" duration="20.0"/>
+    <stop busStop="1800SB32791" duration="20.0"/>
+    <stop busStop="1800SB32771" duration="20.0"/>
+    <stop busStop="1800SB32801" duration="20.0"/>
+  </trip>
+  <trip id="42_D_I_1_" type="BUS" depart="0.0" from="edge253606" to="edge216100">
+    <stop busStop="1800SB12381" duration="20.0"/>
+    <stop busStop="1800SB34141" duration="20.0"/>
+  </trip>
+  <trip id="42A__I_1_" type="BUS" depart="0.0" from="edge239888" to="edge249983">
+    <stop busStop="1800SG40471" duration="20.0"/>
+    <stop busStop="1800SG40651" duration="20.0"/>
+  </trip>
+  <trip id="42B_A_I_1_" type="BUS" depart="0.0" from="edge253606" to="edge216100">
+    <stop busStop="1800SB12381" duration="20.0"/>
+    <stop busStop="1800SB34141" duration="20.0"/>
+  </trip>
+  <trip id="42C__I_1_" type="BUS" depart="0.0" from="edge253606" to="edge216100">
+    <stop busStop="1800SB12381" duration="20.0"/>
+    <stop busStop="1800SB34141" duration="20.0"/>
+  </trip>
+  <trip id="50__I_1_" type="BUS" depart="0.0" from="edge131160" to="edge117522">
+    <stop busStop="1800EB13891" duration="20.0"/>
+    <stop busStop="1800EB13901" duration="20.0"/>
+    <stop busStop="1800EB13831" duration="20.0"/>
+    <stop busStop="1800EB13821" duration="20.0"/>
+  </trip>
+  <trip id="51_A_I_1_" type="BUS" depart="0.0" from="edge131160" to="edge117522">
+    <stop busStop="1800EB13891" duration="20.0"/>
+    <stop busStop="1800EB13901" duration="20.0"/>
+    <stop busStop="1800EB13831" duration="20.0"/>
+    <stop busStop="1800EB13821" duration="20.0"/>
+  </trip>
+  <trip id="53__I_1_" type="BUS" depart="0.0" from="edge250422" to="edge180995">
+    <stop busStop="1800EB04361" duration="20.0"/>
+    <stop busStop="1800EB04391" duration="20.0"/>
+    <stop busStop="1800EB04421" duration="20.0"/>
+    <stop busStop="1800EB04431" duration="20.0"/>
+  </trip>
+  <trip id="706_A_O_1_" type="BUS" depart="0.0" from="edge88694" to="edge203889">
+    <stop busStop="1800EB27611" duration="20.0"/>
+    <stop busStop="1800EB27621" duration="20.0"/>
+  </trip>
+  <trip id="720__I_1_" type="BUS" depart="0.0" from="edge161437" to="edge116458">
+    <stop busStop="1800SB33151" duration="20.0"/>
+    <stop busStop="1800SB02541" duration="20.0"/>
+    <stop busStop="1800SB08661" duration="20.0"/>
+    <stop busStop="1800SB31361" duration="20.0"/>
+    <stop busStop="1800SB31351" duration="20.0"/>
+    <stop busStop="1800SB31311" duration="20.0"/>
+    <stop busStop="1800SB31321" duration="20.0"/>
+    <stop busStop="1800SB31381" duration="20.0"/>
+    <stop busStop="1800SB31371" duration="20.0"/>
+  </trip>
+  <trip id="727__I_1_" type="BUS" depart="0.0" from="edge255778" to="edge62063">
+    <stop busStop="1800EB04211" duration="20.0"/>
+    <stop busStop="1800EB03701" duration="20.0"/>
+    <stop busStop="1800EB03631" duration="20.0"/>
+  </trip>
+  <trip id="728__I_1_" type="BUS" depart="0.0" from="edge93833" to="edge256486">
+    <stop busStop="1800SB31721" duration="20.0"/>
+    <stop busStop="1800SB33001" duration="20.0"/>
+    <stop busStop="1800SB33011" duration="20.0"/>
+    <stop busStop="1800SB33611" duration="20.0"/>
+    <stop busStop="1800SB14111" duration="20.0"/>
+  </trip>
+  <trip id="733__I_1_" type="BUS" depart="0.0" from="edge247555" to="edge245452">
+    <stop busStop="1800SB15051" duration="20.0"/>
+    <stop busStop="1800EB06291" duration="20.0"/>
+    <stop busStop="1800EB06171" duration="20.0"/>
+    <stop busStop="1800EB06191" duration="20.0"/>
+    <stop busStop="1800EB06281" duration="20.0"/>
+  </trip>
+  <trip id="739_B_I_1_" type="BUS" depart="0.0" from="edge256021" to="edge198976">
+    <stop busStop="1800SB31361" duration="20.0"/>
+    <stop busStop="1800SB31351" duration="20.0"/>
+    <stop busStop="1800SB31311" duration="20.0"/>
+    <stop busStop="1800SB31321" duration="20.0"/>
+    <stop busStop="1800SB31381" duration="20.0"/>
+    <stop busStop="1800SB31371" duration="20.0"/>
+    <stop busStop="1800SB31281" duration="20.0"/>
+    <stop busStop="1800SB31391" duration="20.0"/>
+  </trip>
+  <trip id="744__I_1_" type="BUS" depart="0.0" from="edge222830" to="edge252139">
+    <stop busStop="1800SJ32001" duration="20.0"/>
+    <stop busStop="1800SJ30051" duration="20.0"/>
+    <stop busStop="1800SJ30061" duration="20.0"/>
+    <stop busStop="1800SJ32021" duration="20.0"/>
+    <stop busStop="1800SJ32031" duration="20.0"/>
+  </trip>
+  <trip id="745_A_I_1_" type="BUS" depart="0.0" from="edge15342" to="edge198828">
+    <stop busStop="1800SB14271" duration="20.0"/>
+    <stop busStop="1800SB30601" duration="20.0"/>
+    <stop busStop="1800SJ30401" duration="20.0"/>
+    <stop busStop="1800SJ30411" duration="20.0"/>
+    <stop busStop="1800SJ00321" duration="20.0"/>
+  </trip>
+  <trip id="748_D_I_1_" type="BUS" depart="0.0" from="edge256574" to="edge83620">
+    <stop busStop="1800EB03881" duration="20.0"/>
+    <stop busStop="1800EB03931" duration="20.0"/>
+    <stop busStop="1800EB12901" duration="20.0"/>
+    <stop busStop="1800EB03741" duration="20.0"/>
+  </trip>
+  <trip id="749__I_1_" type="BUS" depart="0.0" from="edge148780" to="edge179750">
+    <stop busStop="1800SB31461" duration="20.0"/>
+    <stop busStop="1800EB06141" duration="20.0"/>
+    <stop busStop="1800EB06301" duration="20.0"/>
+    <stop busStop="1800EB06311" duration="20.0"/>
+    <stop busStop="1800EB03551" duration="20.0"/>
+  </trip>
+  <trip id="750_A_I_1_" type="BUS" depart="0.0" from="edge189531" to="edge117522">
+    <stop busStop="1800SB14021" duration="20.0"/>
+    <stop busStop="1800EB13891" duration="20.0"/>
+    <stop busStop="1800EB13901" duration="20.0"/>
+    <stop busStop="1800EB13831" duration="20.0"/>
+    <stop busStop="1800EB13821" duration="20.0"/>
+  </trip>
+  <trip id="751_A_I_1_" type="BUS" depart="0.0" from="edge181395" to="edge131159">
+    <stop busStop="1800EB03931" duration="20.0"/>
+    <stop busStop="1800EB12901" duration="20.0"/>
+    <stop busStop="1800EB13891" duration="20.0"/>
+    <stop busStop="1800EB13901" duration="20.0"/>
+  </trip>
+  <trip id="753__I_1_" type="BUS" depart="0.0" from="edge239888" to="edge249983">
+    <stop busStop="1800SG40471" duration="20.0"/>
+    <stop busStop="1800SG40651" duration="20.0"/>
+  </trip>
+  <trip id="761__I_1_" type="BUS" depart="0.0" from="edge239888" to="edge249983">
+    <stop busStop="1800SG40471" duration="20.0"/>
+    <stop busStop="1800SG40651" duration="20.0"/>
+  </trip>
+  <trip id="763__I_1_" type="BUS" depart="0.0" from="edge197057" to="edge255834">
+    <stop busStop="1800SB34411" duration="20.0"/>
+    <stop busStop="1800SB33871" duration="20.0"/>
+    <stop busStop="1800SB34371" duration="20.0"/>
+    <stop busStop="1800SB33861" duration="20.0"/>
+    <stop busStop="1800SB34311" duration="20.0"/>
+    <stop busStop="1800SB34321" duration="20.0"/>
+    <stop busStop="1800EB04161" duration="20.0"/>
+  </trip>
+  <trip id="769__I_1_" type="BUS" depart="0.0" from="edge256460" to="edge253723">
+    <stop busStop="1800EB04321" duration="20.0"/>
+    <stop busStop="1800EB04311" duration="20.0"/>
+  </trip>
+  <trip id="792_A_O_1_" type="BUS" depart="0.0" from="edge239888" to="edge27914">
+    <stop busStop="1800SG40471" duration="20.0"/>
+    <stop busStop="1800SG40651" duration="20.0"/>
+    <stop busStop="1800SG40461" duration="20.0"/>
+    <stop busStop="1800SG40491" duration="20.0"/>
+  </trip>
+  <trip id="797__I_1_" type="BUS" depart="0.0" from="edge245343" to="edge179750">
+    <stop busStop="1800EB01781" duration="20.0"/>
+    <stop busStop="1800EB01871" duration="20.0"/>
+    <stop busStop="1800EB06141" duration="20.0"/>
+    <stop busStop="1800EB06301" duration="20.0"/>
+    <stop busStop="1800EB06311" duration="20.0"/>
+    <stop busStop="1800EB03551" duration="20.0"/>
+  </trip>
+  <trip id="811_B_I_1_" type="BUS" depart="0.0" from="edge239888" to="edge27914">
+    <stop busStop="1800SG40471" duration="20.0"/>
+    <stop busStop="1800SG40651" duration="20.0"/>
+    <stop busStop="1800SG40461" duration="20.0"/>
+    <stop busStop="1800SG40491" duration="20.0"/>
+  </trip>
+  <trip id="86_N_O_1_" type="BUS" depart="0.0" from="edge1906" to="edge162699">
+    <stop busStop="1800SBT0131" duration="20.0"/>
+    <stop busStop="1800SB32611" duration="20.0"/>
+    <stop busStop="1800SB32621" duration="20.0"/>
+  </trip>
+</additional>

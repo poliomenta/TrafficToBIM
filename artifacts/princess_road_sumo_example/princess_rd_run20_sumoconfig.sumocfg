@@ -1,0 +1,10 @@
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+  <input>
+    <route-files value="princess_rd_run20_routes.rou.xml"/>
+    <net-file value="princess_rd_run20_net.net.xml"/>
+  </input>
+  <output>
+    <tripinfo-output value="princess_rd_run20.tripinfo.xml"/>
+  </output>
+  <additional-files value="princess_rd_run20_additional_config.xml,princess_rd_run20_bus_stops.add.xml"/>
+</configuration>

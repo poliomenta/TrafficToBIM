@@ -1,0 +1,6 @@
+
+<additional>
+    <edgeData id="aggregate" vTypes="DEFAULT_VEHTYPE" file="princess_rd_run20_aggregated_info.xml"/>
+    <edgeData id="aggregate" vTypes="BUS" file="princess_rd_run20_aggregated_bus_info.xml"/>
+</additional>
+        

@@ -1,0 +1,36 @@
+Warning: Could not set locale to 'C'.
+Warning: Found sharp turn with radius 7.79 at the end of edge 'edge100357'.
+Warning: Found angle of 99.24 degrees at edge 'edge100985', segment 4.
+Warning: Found sharp turn with radius 6.68 at the end of edge 'edge100985'.
+Warning: Found sharp turn with radius 6.98 at the start of edge 'edge101837'.
+Warning: Found sharp turn with radius 7.32 at the start of edge 'edge105378'.
+Warning: Found sharp turn with radius 3.95 at the end of edge 'edge108945'.
+Warning: Found sharp turn with radius 5.17 at the end of edge 'edge113303'.
+Warning: Found sharp turn with radius 8.48 at the end of edge 'edge114339'.
+Warning: Found angle of 99.34 degrees at edge 'edge115025', segment 0.
+Warning: Found angle of 101.54 degrees at edge 'edge120896', segment 1.
+Warning: Found angle of 99.72 degrees at edge 'edge121808', segment 0.
+Warning: Found angle of 105.59 degrees at edge 'edge121914', segment 0.
+Warning: Found sharp turn with radius 7.35 at the start of edge 'edge1226'.
+Warning: Found sharp turn with radius 8.44 at the start of edge 'edge123558'.
+Warning: Found sharp turn with radius 1.00 at the start of edge 'edge124195'.
+Warning: Shape for junction 'node102525' has distance 29.87 to its given position.
+Warning: Shape for junction 'node125546' has distance 21.33 to its given position.
+Warning: Shape for junction 'node152314' has distance 26.01 to its given position.
+Warning: Speed of turning connection 'edge253717_0->edge5575_0' reduced by 31.76 due to turning radius of 12.34 (length=13.44, angle=81.75).
+Warning: Speed of turning connection 'edge253717_1->edge5575_1' reduced by 33.22 due to turning radius of 8.36 (length=8.80, angle=81.75).
+Warning: Speed of straight connection 'edge5575_1->edge95969_1' reduced by 5.26 due to turning radius of 363.99 (length=15.46, angle=17.44).
+Warning: Speed of turning connection 'edge95968_0->edge95969_0' reduced by 44.85 due to turning radius of 4.82 (length=5.39, angle=91.76).
+Warning: Speed of turning connection 'edge95968_1->edge95969_1' reduced by 42.11 due to turning radius of 11.33 (length=14.56, angle=94.21).
+Warning: Intersecting left turns at junction 'node104938' from lane 'edge62013_0' and lane 'edge113231_0' (increase junction radius to avoid this).
+Warning: Intersecting left turns at junction 'node115527' from lane 'edge140765_0' and lane 'edge140764_0' (increase junction radius to avoid this).
+Warning: Connection 'edge70116_1->edge70115_1' is only 0.04m short.
+Warning: Intersecting left turns at junction 'node129805' from lane 'edge95430_0' and lane 'edge90531_0' (increase junction radius to avoid this).
+Warning: Intersecting left turns at junction 'node129805' from lane 'edge95430_0' and lane 'edge90531_1' (increase junction radius to avoid this).
+Warning: Intersecting left turns at junction 'node129805' from lane 'edge95430_1' and lane 'edge90531_0' (increase junction radius to avoid this).
+Warning: 40 total messages of type: Found angle of % degrees at edge '%', segment %.
+Warning: 33 total messages of type: Found sharp turn with radius % at the end of edge '%'.
+Warning: 66 total messages of type: Found sharp turn with radius % at the start of edge '%'.
+Warning: 19 total messages of type: Intersecting left turns at junction '%' from lane '%' and lane '%' (increase junction radius to avoid this).
+Warning: 6638 total messages of type: Speed of % connection '%' reduced by % due to turning radius of % (length=%, angle=%).
+Success.
